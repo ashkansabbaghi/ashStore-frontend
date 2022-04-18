@@ -1,0 +1,34 @@
+@import "var";
+@import "responsive";
+
+
+/* ****************** header ********************** */
+.header-custom {
+  background: $color_w !important;
+  max-width: 900px !important;
+  height: 50px !important;
+  left: 20% !important;
+  box-shadow: $shadow_cart_org !important;
+
+  .v-toolbar__content {
+    height: 50px !important;
+  }
+
+  .search {
+    margin-left: 30px;
+    font-size: $font_small;
+    color: $txt_gray !important;
+
+    .bold-search {
+      margin-left: 10px;
+      color: $color_secondary !important
+    }
+  }
+
+  .input-custom {
+    &:focus-visible {
+      outline: 0 !important;
+    }
+  }
+
+}
