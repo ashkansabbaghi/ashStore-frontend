@@ -1,6 +1,11 @@
 @import "var";
 @import "responsive";
 
+
 * {
-  font-family: IRANSansWeb;
+  box-sizing: content-box;
+}
+
+.row{
+    width: 100%;
 }

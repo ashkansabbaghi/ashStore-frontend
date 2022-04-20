@@ -1,12 +1,10 @@
 <template>
-  <v-app>
-    <AppMenuTop />
-    <!-- <v-sheet id="scrolling-techniques-7" class="overflow-y-auto"> -->
-      <v-container style="height: 1500px;">
-        <Nuxt />
-      </v-container>
-    <!-- </v-sheet> -->
-    <AppFooter />
+  <v-app class="bg-light">
+    <div class="container-main">
+      <AppMenuTop />
+      <Nuxt />
+      <AppFooter />
+    </div>
   </v-app>
 </template>
 

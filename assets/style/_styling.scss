@@ -4,10 +4,15 @@
 
 /* ****************** header ********************** */
 .header-custom {
+  top: 40px !important;
+  margin-top: 0px !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  width: 90% !important;
+
   background: $color_w !important;
   max-width: 900px !important;
   height: 50px !important;
-  left: 20% !important;
   box-shadow: $shadow_cart_org !important;
 
   .v-toolbar__content {
@@ -26,9 +31,67 @@
   }
 
   .input-custom {
+    margin-left: 30px;
+
     &:focus-visible {
       outline: 0 !important;
     }
   }
 
 }
+
+.bg-light {
+  background-color: $bg_light !important;
+}
+
+
+/* ****************** footer ********************** */
+.footer-custom {
+  bottom: 40px !important;
+  margin-top: 0px !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  width: 90% !important;
+
+  max-width: 900px !important;
+  height: 50px !important;
+  padding: 6px 16px !important;
+
+  align-items: center;
+  justify-content: space-between;
+  background: transparent !important;
+
+
+  .bg {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+
+
+    background: $color_w !important;
+    box-shadow: $shadow_cart_org !important;
+    border-radius: 20px !important;
+
+  }
+}
+
+svg {
+  fill: $txt_black;
+
+  &:hover {
+    path {
+      fill: $color_secondary;
+    }
+
+  }
+
+  &.active {
+    fill: $color_secondary;
+  }
+}
+
+
+/* ****************** home ********************** */
+// .home {}

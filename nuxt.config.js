@@ -14,6 +14,10 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  router: {
+    base: "/",
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~assets/style/index"],
 
@@ -27,7 +31,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     "@nuxtjs/vuetify",
-    '@nuxtjs/pwa',
+    "@nuxtjs/pwa",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -59,9 +63,21 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ["~/assets/style/variables.scss"],
+    treeShake: true,
+    options: {
+      customProperties: true,
+    },
     theme: {
       dark: false,
       themes: {
+        light: {
+          primary: '#0687AF',
+          secondary:colors.grey.darken1,
+          accent: colors.pink.darken1,
+          error: colors.red.accent3,
+          background: colors.indigo.lighten5,
+          info: colors.teal.darken1,
+        },
         dark: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,

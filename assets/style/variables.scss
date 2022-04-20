@@ -1,5 +1,21 @@
+@import "var";
+@import "fonts";
 // Ref: https://github.com/nuxt-community/vuetify-module#customvariables
 //
 // The variables you want to modify
-$font-size-root: 20px;
+// $font-size-root: 20px;
 
+// global
+$body-font-family: 'IRANSansWeb';
+// $border-radius-root: 20px;
+
+// header
+$app-bar-border-radius : 20px;
+
+
+// btn
+$btn-active-opacity:0.05;
+$btn-hover-opacity : 0.03;
+$btn-active-opacity  : 0.05;
+$btn-round-border-radius : 20px;
+$btn-focus-opacity : 0.08;
