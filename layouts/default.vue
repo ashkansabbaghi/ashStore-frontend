@@ -1,9 +1,12 @@
 <template>
   <v-app class="bg-light">
     <div class="container-main">
-      <AppMenuTop />
+      <TheMenuTop />
+
       <Nuxt />
-      <AppFooter />
+
+      <TheFooter />
+      <FadeContentBottom />
     </div>
   </v-app>
 </template>

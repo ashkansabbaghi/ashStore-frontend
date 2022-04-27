@@ -39,3 +39,6 @@ $transition_all_btn : all 0.1s ease-in-out;
 
 /**************************** blur ******************************/
 $backdrop_filter_header : blur(30px);
+
+/**************************** linear ******************************/
+$linear_fade_content_bottom : linear-gradient(#f6f6f600 , #f6f6f6b0 , #F6F6F6)

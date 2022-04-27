@@ -4,7 +4,7 @@
 
 /* ****************** header ********************** */
 .header-custom {
-  top: 40px !important;
+  top: 30px !important;
   margin-top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0) !important;
@@ -47,7 +47,7 @@
 
 /* ****************** footer ********************** */
 .footer-custom {
-  bottom: 40px !important;
+  bottom: 30px !important;
   margin-top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0) !important;
@@ -75,6 +75,8 @@
     border-radius: 20px !important;
 
   }
+
+
 }
 
 svg {
@@ -92,6 +94,35 @@ svg {
   }
 }
 
+.under-bg {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 120px;
+  background: $linear_fade_content_bottom;
+}
 
 /* ****************** home ********************** */
-// .home {}
+.home {
+  margin-top: 100px !important;
+
+
+}
+
+.slide-group-custom {
+  background: $bg_light;
+
+  .img-custom {
+    width: 100%;
+    height: auto;
+  }
+}
+.v-slide-group__wrapper{
+  padding :30px 0 !important;
+}
+
+.card-slid-custom {
+  border-radius: 20px !important;
+  margin: 0 15px !important;
+  box-shadow: $shadow_cart_org !important;
+}
