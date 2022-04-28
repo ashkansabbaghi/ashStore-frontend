@@ -6,6 +6,41 @@
   box-sizing: content-box;
 }
 
-.row{
-    width: 100%;
+.row {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px !important;
+  padding: 25px !important;
+}
+
+.txt-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.txt-overflow-line-2 {
+  display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.txt-black {
+  color: $txt_black;
+}
+
+.txt-gray {
+  color: $txt_gray;
+}
+
+.w-100 {
+  width: 100%;
+}
+.display-block {
+  display: block!important;
 }

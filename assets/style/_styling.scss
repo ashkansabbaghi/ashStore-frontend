@@ -9,6 +9,7 @@
   left: 50% !important;
   transform: translate(-50%, 0) !important;
   width: 90% !important;
+  // margin: 0 40px 0 40px;
 
   background: $color_w !important;
   max-width: 900px !important;
@@ -104,25 +105,103 @@ svg {
 
 /* ****************** home ********************** */
 .home {
-  margin-top: 100px !important;
+  margin-top: 130px !important;
 
 
 }
 
+
+
+/* ************** carousel **************** */
 .slide-group-custom {
   background: $bg_light;
 
   .img-custom {
+    border-radius: 20px;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+
+    &.two {
+      position: relative;
+      top: -50px;
+      width: 90%;
+      right: 0;
+      left: 5%;
+      border-radius: 20px;
+      max-height: 200px;
+    }
   }
 }
-.v-slide-group__wrapper{
-  padding :30px 0 !important;
+
+.not-bg {
+  background: transparent !important;
+}
+
+.v-slide-group__wrapper {
+  overflow: visible !important;
+  contain: contain !important;
+}
+
+@include responsive(t) {
+  .v-slide-group__wrapper {
+    overflow: visible !important;
+    contain: layout !important;
+  }
 }
 
 .card-slid-custom {
+  position: relative;
   border-radius: 20px !important;
-  margin: 0 15px !important;
+  margin: 0 15px 0 0px !important;
   box-shadow: $shadow_cart_org !important;
+
+}
+
+.title-carousel {
+  color: $txt_black;
+  margin: 0 0 30px;
+  font-size: 18px;
+}
+
+/* ************** carousel product one ******************* */
+.card-info {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  font-size: 14px;
+
+
+}
+
+/* ************** carousel product two ******************* */
+
+.card-info-two {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  padding: 15px;
+
+
+
+  .title {
+    font-weight: bold !important;
+    padding: 0;
+  }
+
+  .content {
+    padding: 10px 0 0 !important;
+
+  }
+}
+
+.v-avatar {
+  &.avatar-custom {
+  z-index: 1 !important;
+  position: absolute;
+  top: 37%;
+  right: 1%;
+  box-shadow: $shadow_red;
+  }
+
 }
