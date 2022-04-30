@@ -5,8 +5,8 @@
 
       <Nuxt />
 
-      <TheFooter />
       <FadeContentBottom />
+      <TheFooter />
     </div>
   </v-app>
 </template>

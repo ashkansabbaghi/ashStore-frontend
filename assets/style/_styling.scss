@@ -15,6 +15,7 @@
   max-width: 900px !important;
   height: 50px !important;
   box-shadow: $shadow_cart_org !important;
+  z-index: 999;
 
   .v-toolbar__content {
     height: 50px !important;
@@ -62,6 +63,7 @@
   justify-content: space-between;
   background: transparent !important;
 
+  z-index: 999;
 
   .bg {
     position: absolute;
@@ -101,12 +103,14 @@ svg {
   bottom: 0;
   height: 120px;
   background: $linear_fade_content_bottom;
+  z-index: 1;
 }
 
 /* ****************** home ********************** */
-.home {
-  margin-top: 130px !important;
-
+.home,
+.blog {
+  margin-top: 125px !important;
+  padding: 0 !important;
 
 }
 
@@ -197,11 +201,48 @@ svg {
 
 .v-avatar {
   &.avatar-custom {
-  z-index: 1 !important;
-  position: absolute;
-  top: 37%;
-  right: 1%;
-  box-shadow: $shadow_red;
+    z-index: 1 !important;
+    position: absolute;
+    top: 37%;
+    right: 1%;
+    box-shadow: $shadow_red;
   }
 
+}
+
+
+/* ********************* blog *********************** */
+
+.cart-blog {
+  background: none !important;
+  box-shadow: none !important;
+
+  .username {
+    position: absolute !important;
+    left: 90px;
+    top: -25px;
+    letter-spacing: 1px;
+  }
+
+  .text-blog {
+    line-height: 150%;
+  }
+
+  .info-blog{
+    position: relative;
+  }
+}
+.v-carousel__controls {
+  background: linear-gradient(359deg, #000000bd, transparent) !important;
+  border-radius: 0 0 $border_radius_default $border_radius_default !important;
+
+}
+
+.avatar-blog {
+  position: absolute!important;
+  top: -35px;
+  left: 20px;
+  border-radius: $border_radius_default !important;
+  border: 2px solid $color_w !important;
+  box-shadow: $shadow_cart_org !important;
 }

@@ -1,5 +1,5 @@
 <template>
-  <v-container class="home pa-0">
+  <v-container class="home">
     <!-- slider top -->
     <v-container>
       <v-row class="ma-0" justify="center" align="center">

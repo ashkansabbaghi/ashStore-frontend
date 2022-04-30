@@ -20,7 +20,7 @@
         </v-btn>
 
         <!-- blog -->
-        <v-btn to="/blog" icon v-ripple="{ class: `primary--text` }" @click="activeIcon = 'blog'">
+        <v-btn to="/blogs" icon v-ripple="{ class: `primary--text` }" @click="activeIcon = 'blog'">
             <svg :class="{ active: activeIcon == 'blog' }" width="30" height="23" viewBox="0 0 35 28"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
