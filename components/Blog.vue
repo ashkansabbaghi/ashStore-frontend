@@ -1,11 +1,9 @@
 <template>
     <v-card class="cart-blog mx-auto mt-10" max-width="90%">
-        <div class="font-weight-bold text-lowercase username">
-            ashiTech
-        </div>
+        <div class="font-weight-bold text-lowercase username" v-text="blg.auth"> </div>
 
         <!-- slider post -->
-        <v-carousel :continuous="false" :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus"
+        <v-carousel class="carousel-blog" :continuous="false" :show-arrows="false" hide-delimiter-background delimiter-icon="mdi-minus"
             height="400">
             <v-carousel-item v-for="(slide, i) in 6" :key="i">
                 <v-sheet class="bg-none " height="100%">
@@ -25,33 +23,37 @@
         <!-- info blog -->
         <v-list-item class="pa-4 mb-16" three-line>
             <v-list-item-content class="info-blog pa-0">
-                <h5 class="text-h5 font-weight-black txt-black mb-5 mt-4">
-                    Title for one blog in design system and blog about and continue
-                </h5>
-                <p class="text-blog txt-black">It is a long established fact that a reader will be distracted by the readable
-                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                    more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-                    making it look like readable English. Many desktop publishing packages and web page editors now use
-                    Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
-                    still in their infancy. Various versions have evolved over the years, sometimes by accident,
-                    sometimes on purpose`
+                <h5 class="text-h5 font-weight-black txt-black mb-5 mt-4" v-text="blg.title"> </h5>
+                <p class="text-blog txt-black " :class="{ txt_overflow_line_2: more }" v-text="blg.content">
                 </p>
+                <v-btn rounded elevation="0" class="mt-3" v-if="more" @click="$router.push(`/blogs/${blog.slug}`)">more
+                </v-btn>
                 <div class="d-flex justify-space-between pt-7 mb-6">
-                    <span class="txt-gray">2022/05/21</span>
-                    <span class="txt-gray">category blog</span>
+                    <span class="txt-gray" v-text="blg.publishDate"></span>
+                    <span class="txt-gray" v-text="blg.category"></span>
                 </div>
             </v-list-item-content>
-
-
         </v-list-item>
 
     </v-card>
 </template>
+
+
 <script>
+import { mapGetters } from "vuex";
 export default {
+    props: ['blog', 'more'],
     data: () => ({
-        model: null
+        model: null,
+        blg: {}
     }),
+    computed: {
+        ...mapGetters('core', ['isBack'])
+    },
+    created() {
+        this.blg = this.blog
+        this.blg.isActive = false;
+    },
     methods: {}
 }
 </script>

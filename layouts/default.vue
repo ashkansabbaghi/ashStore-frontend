@@ -3,7 +3,7 @@
     <div class="container-main">
       <TheMenuTop />
 
-      <Nuxt />
+      <Nuxt keep-alive/>
 
       <FadeContentBottom />
       <TheFooter />

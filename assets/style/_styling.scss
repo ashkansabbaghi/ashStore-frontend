@@ -238,6 +238,11 @@ svg {
 
 }
 
+.carousel-blog{
+  border-radius: $border_radius_default !important;
+  box-shadow: $shadow_image_org !important;
+}
+
 .avatar-blog {
   position: absolute!important;
   top: -35px;
