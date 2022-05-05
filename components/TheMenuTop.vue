@@ -8,9 +8,26 @@
             </v-btn>
             <v-spacer></v-spacer>
             <!-- more -->
-            <v-btn v-show="toggleSearch" icon v-ripple="{ class: `primary--text` }">
-                <v-icon>mdi-dots-vertical</v-icon>
-            </v-btn>
+            <v-bottom-sheet v-model="sheet" >
+                <template v-slot:activator="{ on, attrs }">
+                    <v-btn v-show="toggleSearch" icon v-ripple="{ class: `primary--text` }" v-bind="attrs" v-on="on">
+                        <v-icon>mdi-dots-vertical</v-icon>
+                    </v-btn>
+                </template>
+                <v-sheet class="text-center" min-height="100px">
+                    <v-card class="mx-auto" height="100%" max-height="200px"  tile>
+                        <v-list flat>
+                            <v-list-item-group v-model="selectItem" color="primary">
+                                <v-list-item v-for="(item, i) in 2" :key="i">
+                                    <v-list-item-content>
+                                        <v-list-item-title class="pa-2" >admin</v-list-item-title>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-list-item-group>
+                        </v-list>
+                    </v-card>
+                </v-sheet>
+            </v-bottom-sheet>
         </template>
         <!-- search -->
         <template v-else>
@@ -44,10 +61,12 @@
 import { mapMutations, mapGetters } from 'vuex'
 export default {
     data: () => ({
-        toggleSearch: true
+        selectItem: '',
+        toggleSearch: true,
+        sheet: false
     }),
     computed: {
-        ...mapGetters('core', ['isBack'])
+        ...mapGetters('core', ['isBack', 'activeIcon'])
     },
     methods: {
         ...mapMutations({}),
@@ -58,6 +77,7 @@ export default {
         },
 
         goBack() {
+            this.$store.commit('core/notBack')
             this.$router.go(-1)
         }
     }

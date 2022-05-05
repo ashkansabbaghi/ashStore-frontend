@@ -1,9 +1,11 @@
 <template>
-  <v-row>
-    <v-col class="text-center">
-      profile
-    </v-col>
-  </v-row>
+  <v-container class="profile">
+    <v-row>
+      <v-col class="text-center">
+        profile
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

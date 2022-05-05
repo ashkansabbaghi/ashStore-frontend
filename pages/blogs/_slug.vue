@@ -2,7 +2,9 @@
     <v-container class="blog">
         <v-row class="ma-0" justify="center" align="center">
             <v-col class="pa-0" cols="12" sm="12">
-                <Blog :blog="blog" :more="false" />
+                <SkeletonLoader v-if="$fetchState.pending" />
+                <p v-else-if="$fetchState.error">error</p>
+                <Blog v-else :blog="blog" :more="false" />
             </v-col>
         </v-row>
     </v-container>
@@ -11,6 +13,7 @@
 <script>
 export default {
     data: () => ({
+        blogs: [],
         blog: {
             id: "1",
             slug: "title-for-one-blog",
@@ -24,7 +27,15 @@ export default {
     }),
     created() {
         this.$store.commit('core/setBack')
-    }
+    },
+    methods: {
+        async setBlog() {
+            return await fetch("https://api.nuxtjs.dev/mountains").then(res => res.json());
+        }
+    },
+    async fetch() {
+        this.blogs = await this.setBlog();
+    },
 }
 </script>
 

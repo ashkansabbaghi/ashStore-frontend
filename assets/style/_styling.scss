@@ -82,18 +82,15 @@
 
 }
 
-svg {
-  fill: $txt_black;
-
-  &:hover {
-    path {
-      fill: $color_secondary;
-    }
-
+a.nuxt-link-active , .default-color-nuxt-link {
+  .svg {
+      fill: $color_primary;
   }
+}
 
-  &.active {
-    fill: $color_secondary;
+a.nuxt-link-exact-active {
+  .svg {
+      fill: $color_secondary;
   }
 }
 
@@ -109,7 +106,7 @@ svg {
 /* ****************** home ********************** */
 .home,
 .blog {
-  margin-top: 125px !important;
+  margin-top: 120px !important;
   padding: 0 !important;
 
 }
@@ -144,7 +141,8 @@ svg {
 
 .v-slide-group__wrapper {
   overflow: visible !important;
-  contain: contain !important;
+  // contain: contain !important;
+  contain: layout !important;
 }
 
 @include responsive(t) {
@@ -157,7 +155,7 @@ svg {
 .card-slid-custom {
   position: relative;
   border-radius: 20px !important;
-  margin: 0 15px 0 0px !important;
+  margin: 0 25px 0 0px !important;
   box-shadow: $shadow_cart_org !important;
 
 }

@@ -10,8 +10,8 @@ export default {
     state.isBack = false;
     if (process.browser) localStorage.setItem("isBack", false);
   },
-  setActiveIconFooter(state, icon) {
-    state.activeIcon = icon;
-    if (process.browser) localStorage.setItem("activeIcon", icon);
-  },
+  // setActiveIconFooter(state, icon) {
+  //   state.activeIcon = icon;
+  //   if (process.browser) localStorage.setItem("activeIcon", icon);
+  // },
 };

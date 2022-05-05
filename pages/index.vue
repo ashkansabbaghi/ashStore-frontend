@@ -29,7 +29,6 @@
 export default {
   name: 'home',
   created() {
-    // console.log(localStorage.getItem('activeIcon'));
   }
 }
 </script>
