@@ -1,9 +1,9 @@
 <template>
   <v-app class="bg-light">
     <div class="container-main">
-      <TheHeader />
+      <TheHeaderBlogs />
 
-      <Nuxt keep-alive/>
+      <Nuxt keep-alive />
 
       <FadeContentBottom />
       <TheFooter />
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "DefaultLayout",
+  name: "blog",
   data() {
     return {};
   },

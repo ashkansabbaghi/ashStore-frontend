@@ -4,8 +4,7 @@
     }" min-height="200" transition="fade-transition">
         <v-card class="cart-blog mx-auto mt-10" max-width="90%">
             <div class="font-weight-bold text-lowercase username" v-text="blog.auth"> </div>
-
-            <!-- slider post -->
+            <!-- slider image post -->
             <v-carousel class="carousel-blog" :continuous="false" :show-arrows="false" hide-delimiter-background
                 delimiter-icon="mdi-minus" height="400">
                 <v-carousel-item v-for="(slide, i) in 6" :key="i">
@@ -27,8 +26,8 @@
             <!-- info blog -->
             <v-list-item class="pa-4 mb-16" three-line>
                 <v-list-item-content class="info-blog pa-0">
-                    <h5 class="text-h5 font-weight-black txt-black mb-5 mt-4" v-text="blog.title"> </h5>
-                    <p class="text-blog txt-black " :class="{ txt_overflow_line_2: more }" v-text="blog.content">
+                    <h5 class="text-h5 font-weight-black txt-black mb-5 mt-4" v-html="blog.title"> </h5>
+                    <p class="text-blog txt-black " :class="{ txt_overflow_line_2: more }" v-html="blog.content">
                     </p>
                     <v-btn rounded elevation="0" class="mt-3" v-if="more" @click="clickMore()">more
                     </v-btn>
@@ -36,7 +35,7 @@
                     <v-btn rounded elevation="0" class="mt-3" v-if="!more" @click="clickUpdateBlog()">update blog
                     </v-btn>
                     <div class="d-flex justify-space-between pt-7 mb-6">
-                        <span class="txt-gray" v-text="blog.publishDate"></span>
+                        <span class="txt-gray" v-text="blog.date"></span>
                         <span class="txt-gray" v-text="blog.category"></span>
                     </div>
                 </v-list-item-content>

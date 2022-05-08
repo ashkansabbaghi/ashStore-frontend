@@ -4,17 +4,19 @@
       <v-col class="pa-0" cols="12" sm="12">
         <SkeletonLoader v-if="$fetchState.pending" />
         <p v-else-if="$fetchState.error">error</p>
-        <Blog v-else v-for="blog in listBlogs" :key="blog.id" :blog="blog" :more="true" />
+        <Blog v-else v-for="blog in gBlogs" :key="blog.id" :blog="blog" :more="true" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import { mapActions , mapGetters } from "vuex";
 export default {
+  layout: 'blog',
   name: "blog",
   data: () => ({
-    blogs: [],
+    blogs: {},
     listBlogs: [{
       id: "1",
       auth: "ashStore",
@@ -54,16 +56,21 @@ export default {
     }
     ],
   }),
+  computed: {
+    ...mapGetters('blog' , ['gBlogs'])
+  },
   created() {
     this.$store.commit("core/notBack");
   },
   methods: {
-    async setBlog() {
-      return await fetch("https://api.nuxtjs.dev/mountains").then(res => res.json());
-    }
+    ...mapActions('blog', ['getBlogs']),
+    // async setBlog() {
+    //   return await fetch("https://api.nuxtjs.dev/mountains").then(res => res.json());
+    // }
   },
   async fetch() {
-    this.blogs = await this.setBlog();
+    const blog = await this.getBlogs();
+    console.log(blog);
   },
 }
 </script>

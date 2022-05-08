@@ -11,7 +11,10 @@
 </template>
 
 <script>
+import { mapActions , mapGetters } from "vuex";
+
 export default {
+    layout: 'child',
     data: () => ({
         blogs: [],
         blog: {
@@ -25,16 +28,21 @@ export default {
             image: []
         }
     }),
+     computed: {
+    ...mapGetters('blog' , ['gBlogs'])
+  },
     created() {
         this.$store.commit('core/setBack')
     },
     methods: {
-        async setBlog() {
-            return await fetch("https://api.nuxtjs.dev/mountains").then(res => res.json());
-        }
+    ...mapActions('blog', ['getBlogs']),
+
+        // async setBlog() {
+        //     return await fetch("https://api.nuxtjs.dev/mountains").then(res => res.json());
+        // }
     },
     async fetch() {
-        this.blogs = await this.setBlog();
+        this.blogs = await this.getBlogs();
     },
 }
 </script>

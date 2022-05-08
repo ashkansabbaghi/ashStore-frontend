@@ -3,6 +3,7 @@ $bg_light : #F6F6F6;
 $color_w: #ffffff;
 $color_secondary: #0687AF;
 $color_primary: #494949;
+$color_gray: #D3D3D3;
 
 /**************************** color txt ******************************/
 $txt_black : #494949;
@@ -44,4 +45,5 @@ $transition_all_btn : all 0.1s ease-in-out;
 $backdrop_filter_header : blur(30px);
 
 /**************************** linear ******************************/
-$linear_fade_content_bottom : linear-gradient(#f6f6f600 , #f6f6f6b0 , #F6F6F6)
+$linear_fade_content_bottom : linear-gradient(#f6f6f600 , #f6f6f6b0 , #F6F6F6);
+$linear_fade_content_top : linear-gradient(#F6F6F6 , #f6f6f6b0 , #f6f6f600);

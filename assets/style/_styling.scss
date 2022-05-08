@@ -9,13 +9,13 @@
   left: 50% !important;
   transform: translate(-50%, 0) !important;
   width: 90% !important;
-  // margin: 0 40px 0 40px;
 
   background: $color_w !important;
   max-width: 900px !important;
   height: 50px !important;
   box-shadow: $shadow_cart_org !important;
   z-index: 999;
+
 
   .v-toolbar__content {
     height: 50px !important;
@@ -42,10 +42,15 @@
 
 }
 
+.header-profile {
+  background: none !important;
+  box-shadow: none !important;
+
+}
+
 .bg-light {
   background-color: $bg_light !important;
 }
-
 
 /* ****************** footer ********************** */
 .footer-custom {
@@ -82,15 +87,16 @@
 
 }
 
-a.nuxt-link-active , .default-color-nuxt-link {
+a.nuxt-link-active,
+.default-color-nuxt-link {
   .svg {
-      fill: $color_primary;
+    fill: $color_primary;
   }
 }
 
 a.nuxt-link-exact-active {
   .svg {
-      fill: $color_secondary;
+    fill: $color_secondary;
   }
 }
 
@@ -102,10 +108,17 @@ a.nuxt-link-exact-active {
   background: $linear_fade_content_bottom;
   z-index: 1;
 }
+.top-bg{
+  top: 0!important;
+  background: $linear_fade_content_top !important;
+
+
+}
 
 /* ****************** home ********************** */
 .home,
-.blog {
+.blog,
+.profile {
   margin-top: 120px !important;
   padding: 0 !important;
 
@@ -226,26 +239,65 @@ a.nuxt-link-exact-active {
     line-height: 150%;
   }
 
-  .info-blog{
+  .info-blog {
     position: relative;
   }
 }
+
 .v-carousel__controls {
   background: linear-gradient(359deg, #000000bd, transparent) !important;
   border-radius: 0 0 $border_radius_default $border_radius_default !important;
 
 }
 
-.carousel-blog{
+.carousel-blog {
   border-radius: $border_radius_default !important;
   box-shadow: $shadow_image_org !important;
 }
 
 .avatar-blog {
-  position: absolute!important;
+  position: absolute !important;
   top: -35px;
   left: 20px;
   border-radius: $border_radius_default !important;
   border: 2px solid $color_w !important;
   box-shadow: $shadow_cart_org !important;
+}
+
+// create blog
+.input-title {
+  .v-input__slot {
+    box-shadow: none !important;
+    border-radius: 20px 20px 0px 0px !important;
+  }
+}
+
+.tiptop-custom {
+  .v-card {
+    box-shadow: none !important;
+  }
+}
+
+/* ****************** profile ***************** */
+.profile {
+  .txt-1 {
+    letter-spacing: 2px !important;
+    padding: 5px 0px 3px;
+  }
+
+  .txt-2 {
+    letter-spacing: 1px !important;
+    font-size: 12px
+  }
+
+  .side-2 {
+    min-height: 100vh;
+    border-radius: $border_radius_default !important;
+  }
+
+  .list-custom {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+  }
 }

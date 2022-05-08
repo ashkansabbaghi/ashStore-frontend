@@ -22,7 +22,8 @@
   text-overflow: ellipsis;
 }
 
-.txt-overflow-line-2 , .txt_overflow_line_2 {
+.txt-overflow-line-2,
+.txt_overflow_line_2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -42,6 +43,10 @@
   width: 100%;
 }
 
+.w-90 {
+  width: 90% !important;
+}
+
 .display-block {
   display: block !important;
 }
@@ -54,3 +59,25 @@
   background: none !important;
 }
 
+.el-center {
+  position: relative;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+
+.v-alert {
+  position: fixed !important;
+  top: 15% !important;
+  width: 90% !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  opacity: 0.8;
+}
+
+.line-top-custom {
+  margin: auto;
+  width: 100px;
+  background: $color_gray !important;
+  border: 2px solid $color_gray !important;
+  border-radius: 5px;
+}
