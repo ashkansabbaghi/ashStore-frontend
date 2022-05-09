@@ -38,12 +38,15 @@
         </v-list>
       </v-col>
     </v-row>
+
+    <FadeContentBottom />
+    <TheFooter />
   </v-container>
 </template>
 
 <script>
 export default {
-  layout:'profile',
+  layout: 'profile',
   name: 'profile',
   data: () => ({
     selectItem: null,
@@ -51,6 +54,7 @@ export default {
       { title: "info", link: "profile/info" },
       { title: "address", link: "profile/address" },
     ]
-  })
+  }),
+
 }
 </script>

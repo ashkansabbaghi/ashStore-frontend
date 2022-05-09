@@ -1,13 +1,9 @@
 <template>
-  <v-app class="bg-light">
+  <v-app class="">
     <div class="container-main">
-      <TheHeaderProfile />
-      <FadeContentTop />
 
       <Nuxt keep-alive/>
 
-      <!-- <FadeContentBottom /> -->
-      <!-- <TheFooter /> -->
     </div>
   </v-app>
 </template>

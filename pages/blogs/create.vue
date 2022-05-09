@@ -6,10 +6,10 @@
                     maxlength="50" label="title" solo></v-text-field>
                 <Editor v-model="blog.content" />
             </v-col>
-            <v-btn color="success" x-large @click="clickPublish" :loading="loading" class="mt-5 w-90">publish</v-btn>
+            <v-btn x-large @click="clickPublish" :loading="loading" class="mt-5 w-90 bg-color-second">publish</v-btn>
         </v-row>
-        <v-alert  v-if="alert.isActive" border="right" :color="alert.color" elevation="24" :type="alert.type"
-           >{{alert.text}}
+        <v-alert v-if="alert.isActive" border="right" :color="alert.color" elevation="24" :type="alert.type">
+            {{ alert.text }}
         </v-alert>
     </v-container>
 </template>

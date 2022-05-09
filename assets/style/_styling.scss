@@ -108,8 +108,9 @@ a.nuxt-link-exact-active {
   background: $linear_fade_content_bottom;
   z-index: 1;
 }
-.top-bg{
-  top: 0!important;
+
+.top-bg {
+  top: 0 !important;
   background: $linear_fade_content_top !important;
 
 
@@ -123,8 +124,6 @@ a.nuxt-link-exact-active {
   padding: 0 !important;
 
 }
-
-
 
 /* ************** carousel **************** */
 .slide-group-custom {
@@ -291,13 +290,53 @@ a.nuxt-link-exact-active {
   }
 
   .side-2 {
-    min-height: 100vh;
+    min-height: calc(100vh);
     border-radius: $border_radius_default !important;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .list-custom {
     padding: 0;
     width: 90%;
     margin: auto;
+  }
+}
+
+
+/* ****************** login ******************** */
+.login {
+  margin-top: 50px;
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+  }
+
+  .welcome {
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    letter-spacing: 4px !important;
+    color: $txt_black;
+  }
+
+  .text {
+    position: relative;
+    top: -5px;
+    color: $txt_black;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .v-input__slot {
+    background: #F8F8F8 !important;
+    box-shadow: none !important;
   }
 }
