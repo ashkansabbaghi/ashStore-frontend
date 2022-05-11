@@ -1,4 +1,6 @@
 export default () => ({
   image: {},
-  blogs: []
+  blogs: [],
+  blog: {},
+  categories : [],
 });

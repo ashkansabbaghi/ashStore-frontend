@@ -21,7 +21,7 @@
             </v-btn>
 
             <!-- more -->
-            <v-bottom-sheet v-model="selectMore">
+            <v-bottom-sheet v-model="selectMore" v-if="seller">
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn v-show="toggleSearch" icon v-ripple="{ class: `primary--text` }" v-bind="attrs" v-on="on">
                         <v-icon>mdi-dots-vertical</v-icon>
@@ -50,6 +50,7 @@
 import { mapMutations, mapGetters } from 'vuex'
 export default {
     data: () => ({
+        seller:false,
         toggleSearch: true,
         selectMore: 0,
         selectItem: 0,

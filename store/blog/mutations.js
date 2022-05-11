@@ -4,7 +4,14 @@ export default {
   },
 
   setBlogs(state, blogs) {
-    // console.log(blogs);
     state.blogs = blogs;
+  },
+
+  setBlog(state, blog) {
+    state.blog = blog;
+  },
+
+  setCategories(state , categories) {
+    state.categories = categories
   }
 };

@@ -153,8 +153,8 @@ a.nuxt-link-exact-active {
 
 .v-slide-group__wrapper {
   overflow: visible !important;
-  // contain: contain !important;
-  contain: layout !important;
+  contain: contain !important;
+  // contain: layout !important;
 }
 
 @include responsive(t) {
@@ -256,11 +256,19 @@ a.nuxt-link-exact-active {
 
 .avatar-blog {
   position: absolute !important;
+  width: 60px;
+  height: 60px;
   top: -35px;
   left: 20px;
   border-radius: $border_radius_default !important;
   border: 2px solid $color_w !important;
   box-shadow: $shadow_cart_org !important;
+  background: $color_secondary;
+
+  img {
+    width: 40px !important;
+    height: auto !important ;
+  }
 }
 
 // create blog
