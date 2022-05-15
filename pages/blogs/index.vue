@@ -31,6 +31,7 @@ export default {
   },
   created() {
     this.$store.commit("core/notBack");
+    // this.$vuetify.rtl = true;
   },
   methods: {
     ...mapActions("blog", ["getBlogs", "getCategories"]),

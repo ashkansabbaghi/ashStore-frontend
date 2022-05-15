@@ -6,6 +6,27 @@
   box-sizing: content-box;
 }
 
+.container-main {
+  max-width: 990px;
+  margin: auto;
+  box-shadow: 0px 0px 120px 4px #00000014;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+@include responsive(t) {
+  .container-main {
+    max-width: 100%;
+    margin: 0;
+    box-shadow: none;
+    overflow: none;
+    padding: 0;
+
+
+  }
+
+}
+
 .row {
   width: 100%;
 }
@@ -16,6 +37,10 @@
 }
 
 /* ******************** typography ********************* */
+
+.dir-rtl{
+  direction: rtl ;
+}
 
 .txt-overflow {
   overflow: hidden;
@@ -41,7 +66,7 @@
   color: $txt_gray;
 }
 
-.txt-second{
+.txt-second {
   color: $color_secondary !important;
 
 }
@@ -49,7 +74,7 @@
 /* ******************** bg btn ********************* */
 
 .bg-color-second {
-  color: $color_w!important;
+  color: $color_w !important;
   background-color: $color_secondary !important;
 }
 
@@ -64,7 +89,7 @@
   width: 90% !important;
 }
 
-.max-w-500{
+.max-w-500 {
   max-width: 500px !important;
 }
 
@@ -112,4 +137,11 @@
   &::before {
     border-color: $color_gray !important;
   }
+}
+
+
+/* ****************** carousel slider *********************** */
+.v-slide-group__prev,
+.v-slide-group__next {
+  z-index: 1;
 }

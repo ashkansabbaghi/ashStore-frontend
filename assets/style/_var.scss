@@ -44,6 +44,8 @@ $transition_all_btn : all 0.1s ease-in-out;
 /**************************** blur ******************************/
 $backdrop_filter_header : blur(30px);
 
-/**************************** linear ******************************/
+/**************************** linear color ******************************/
 $linear_fade_content_bottom : linear-gradient(#f6f6f600 , #f6f6f6b0 , #F6F6F6);
 $linear_fade_content_top : linear-gradient(#F6F6F6 , #f6f6f6b0 , #f6f6f600);
+$linear_fade_focus_sliders_bottom : linear-gradient(#ffffff00 , #0688af93 , #0687AF);
+$linear_fade_focus_sliders_top : linear-gradient(#0687AF , #0688af93 , #ffffff00);

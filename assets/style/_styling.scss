@@ -153,8 +153,8 @@ a.nuxt-link-exact-active {
 
 .v-slide-group__wrapper {
   overflow: visible !important;
-  contain: contain !important;
-  // contain: layout !important;
+  // contain: contain !important;
+  contain: layout !important;
 }
 
 @include responsive(t) {
@@ -169,6 +169,16 @@ a.nuxt-link-exact-active {
   border-radius: 20px !important;
   margin: 0 25px 0 0px !important;
   box-shadow: $shadow_cart_org !important;
+
+
+  &:focus {
+
+    &:before {
+      opacity: .1 !important;
+      background: $linear_fade_focus_sliders_bottom !important;
+      border-radius: $border-radius-root !important;
+    }
+  }
 
 }
 
@@ -267,7 +277,7 @@ a.nuxt-link-exact-active {
 
   img {
     width: 40px !important;
-    height: auto !important ;
+    height: auto !important;
   }
 }
 
