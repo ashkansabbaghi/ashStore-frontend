@@ -7,11 +7,13 @@
     min-height="200"
     transition="fade-transition"
   >
-    <v-card  class="cart-blog mx-auto mt-10" max-width="90%">
-      <div
-        class="font-weight-bold text-lowercase username"
-        v-text="blog.author"
-      ></div>
+    <v-card class="cart-blog mx-auto mt-10" max-width="90%">
+      <template v-if="findUser(blog.author)">
+        <span
+          class="font-weight-bold text-lowercase username"
+          v-text="user"
+        ></span>
+      </template>
       <!-- slider image post -->
       <v-carousel
         class="carousel-blog"
@@ -27,20 +29,13 @@
             <v-row class="fill-height ma-0" align="center" justify="center">
               <v-img
                 :src="setImage(image)"
-                :lazy-src="`https://picsum.photos/id/11/100/60`"
+                :lazy-src="require('@/static/svg/logo_and_text.svg')"
                 width="auto"
                 height="100%"
                 contain
                 class="border-radius-20"
               >
               </v-img>
-              <!-- <img
-                :src="setImage(image)"
-                width="auto"
-                height="100%"
-                class="border-radius-20"
-              /> -->
-              <!-- </img> -->
             </v-row>
           </v-sheet>
         </v-carousel-item>
@@ -97,16 +92,16 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  props: ["blog", "more", "categories"],
+  props: ["blog", "more", "categories", "users"],
   data: () => ({
     model: null,
     blg: {},
     images: [],
     content: "",
     category: "",
+    user: "",
     loading: false,
     isActive: false,
-    img: "http://ashkansabbaghi.ir/wp-content/uploads/2022/05/Instagram-post-5.png",
   }),
   computed: {
     ...mapGetters("core", ["isBack"]),
@@ -120,10 +115,15 @@ export default {
       console.log("update blog");
     },
     findCat(c) {
-      //   console.log("find cat ", c, this.category);
       const cats = this.categories.find((cat) => cat.id == c);
-      //   console.log(cats);
       this.category = cats.name;
+      return true;
+    },
+    findUser(c) {
+      // console.log(c);
+      // console.log(this.users);
+      const user = this.users.find((u) => u.id == c);
+      this.user = user.name;
       return true;
     },
     separator() {
@@ -135,17 +135,14 @@ export default {
         this.images.push(m[1]);
       }
       this.content = info.replace(rexTagImg, " ");
-      // console.log(this.content);
     },
     setImage: (img) => {
       let newImg = `http://${img}`;
-      // console.log("set image  :", newImg);
       return newImg;
     },
   },
   async fetch() {
     this.separator();
-    // console.log("separator :", this.images);
   },
 };
 </script>

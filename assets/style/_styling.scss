@@ -241,6 +241,7 @@ a.nuxt-link-exact-active {
     position: absolute !important;
     left: 90px;
     top: -25px;
+    color: $color_primary;
     letter-spacing: 1px;
   }
 
@@ -254,9 +255,8 @@ a.nuxt-link-exact-active {
 }
 
 .v-carousel__controls {
-  background: linear-gradient(359deg, #000000bd, transparent) !important;
+  background: linear-gradient(359deg, #014f67b5, transparent) !important;
   border-radius: 0 0 $border_radius_default $border_radius_default !important;
-
 }
 
 .carousel-blog {

@@ -3,4 +3,5 @@ export default () => ({
   blogs: [],
   blog: {},
   categories : [],
+  users : [],
 });

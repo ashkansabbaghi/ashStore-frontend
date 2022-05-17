@@ -11,7 +11,11 @@ export default {
     state.blog = blog;
   },
 
-  setCategories(state , categories) {
+  setCategories(state, categories) {
     state.categories = categories
+  },
+
+  setUsers(state, users) {
+    state.users = users
   }
 };

@@ -8,6 +8,7 @@
 
 .container-main {
   max-width: 990px;
+  min-width: 990px;
   margin: auto;
   box-shadow: 0px 0px 120px 4px #00000014;
   overflow: hidden;
@@ -17,6 +18,7 @@
 @include responsive(t) {
   .container-main {
     max-width: 100%;
+    min-width: auto;
     margin: 0;
     box-shadow: none;
     overflow: none;
@@ -38,8 +40,8 @@
 
 /* ******************** typography ********************* */
 
-.dir-rtl{
-  direction: rtl ;
+.dir-rtl {
+  direction: rtl;
 }
 
 .txt-overflow {
@@ -68,7 +70,6 @@
 
 .txt-second {
   color: $color_secondary !important;
-
 }
 
 /* ******************** bg btn ********************* */
@@ -110,7 +111,6 @@
   left: 50% !important;
   transform: translate(-50%, 0) !important;
 }
-
 
 
 .line-top-custom {
