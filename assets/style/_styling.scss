@@ -8,7 +8,8 @@
   margin-top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0) !important;
-  width: 90% !important;
+  // width: 90% !important;
+  width: calc(100% - 50px);
 
   background: $color_w !important;
   max-width: 900px !important;
@@ -58,7 +59,9 @@
   margin-top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0) !important;
-  width: 90% !important;
+  // width: 90% !important;
+  width: calc(100% - 50px);
+
 
   max-width: 900px !important;
   height: 50px !important;
@@ -184,7 +187,7 @@ a.nuxt-link-exact-active {
 
 .title-carousel {
   color: $txt_black;
-  margin: 0 0 30px;
+  margin: 0 0 30px 25px;
   font-size: 18px;
 }
 
@@ -236,6 +239,7 @@ a.nuxt-link-exact-active {
 .cart-blog {
   background: none !important;
   box-shadow: none !important;
+  width: calc(100% - 50px);
 
   .username {
     position: absolute !important;
@@ -245,6 +249,11 @@ a.nuxt-link-exact-active {
     letter-spacing: 1px;
   }
 
+  .title-blog {
+    font-size: 1.7rem !important;
+    font-weight: bolder !important;
+  }
+
   .text-blog {
     line-height: 150%;
   }
@@ -252,16 +261,36 @@ a.nuxt-link-exact-active {
   .info-blog {
     position: relative;
   }
+
+  @include responsive(s) {
+    .username {
+      font-size: $font_s_txt !important
+    }
+
+    .title-blog {
+      font-size: $font_s_title !important;
+    }
+
+    .text-blog {
+      font-size: $font_s_txt !important;
+
+    }
+
+    .footer-blog {
+      font-size: $font_s_small !important;
+    }
+  }
 }
 
 .v-carousel__controls {
-  background: linear-gradient(359deg, #014f67b5, transparent) !important;
+  background: linear-gradient(360deg, #014f6783, transparent) !important;
   border-radius: 0 0 $border_radius_default $border_radius_default !important;
 }
 
 .carousel-blog {
   border-radius: $border_radius_default !important;
   box-shadow: $shadow_image_org !important;
+  height: calc(100vh-50px);
 }
 
 .avatar-blog {

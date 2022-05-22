@@ -1,7 +1,12 @@
 <template>
   <div>
     <!-- Use the component in the right place of the template -->
-    <tiptap-vuetify class="tiptop-custom w-90 ma-auto" :value="value" :extensions="extensions" @input="$emit('input', arguments[0])"/>
+    <tiptap-vuetify
+      class="tiptop-custom w-90 ma-auto"
+      :value="value"
+      :extensions="extensions"
+      @input="$emit('input', arguments[0])"
+    />
   </div>
 </template>
 
@@ -23,7 +28,7 @@ import {
   Blockquote,
   HardBreak,
   HorizontalRule,
-  History
+  History,
 } from "tiptap-vuetify";
 
 export default {
@@ -35,8 +40,8 @@ export default {
       default: `
       <h1>Yay Headlines!</h1>
       <p>All these <strong>cool tags</strong> are working now.</p>
-    `
-    }
+    `,
+    },
   },
 
   data: () => ({
@@ -55,18 +60,18 @@ export default {
         Heading,
         {
           options: {
-            levels: [1, 2, 3]
-          }
-        }
+            levels: [1, 2, 3],
+          },
+        },
       ],
       Bold,
       Link,
       Code,
       HorizontalRule,
       Paragraph,
-      HardBreak
-    ]
+      HardBreak,
+    ],
     // starting editor's content
-  })
+  }),
 };
 </script>

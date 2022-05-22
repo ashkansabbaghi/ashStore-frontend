@@ -19,6 +19,10 @@ $rounded_default : 20px;
 /**************************** font size *******************************/
 $font_small:14px;
 
+$font_s_title:1.1rem;
+$font_s_txt:0.8rem;
+$font_s_small:0.6rem;
+
 
 /**************************** size image ******************************/
 // $img_h : 300px;
@@ -45,7 +49,7 @@ $transition_all_btn : all 0.1s ease-in-out;
 $backdrop_filter_header : blur(30px);
 
 /**************************** linear color ******************************/
-$linear_fade_content_bottom : linear-gradient(#f6f6f600 , #f6f6f6b0 , #F6F6F6);
-$linear_fade_content_top : linear-gradient(#F6F6F6 , #f6f6f6b0 , #f6f6f600);
-$linear_fade_focus_sliders_bottom : linear-gradient(#ffffff00 , #0688af93 , #0687AF);
-$linear_fade_focus_sliders_top : linear-gradient(#0687AF , #0688af93 , #ffffff00);
+$linear_fade_content_bottom : linear-gradient(#f6f6f600, #f6f6f6b0, #F6F6F6);
+$linear_fade_content_top : linear-gradient(#F6F6F6, #f6f6f6b0, #f6f6f600);
+$linear_fade_focus_sliders_bottom : linear-gradient(#ffffff00, #0688af93, #0687AF);
+$linear_fade_focus_sliders_top : linear-gradient(#0687AF, #0688af93, #ffffff00);

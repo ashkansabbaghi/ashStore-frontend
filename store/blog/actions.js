@@ -37,10 +37,21 @@ export default {
   async getBlog({
     commit
   }, slug) {
-    console.log(slug);
+    // console.log(slug);
     await api.get(`${URL_WP}${POST+slug}`).then((res) => {
       // console.log(res.data);
       if (res.status === 200) commit("setBlog", res.data);
+    });
+  },
+
+  async getUser({
+    commit
+  }, id) {
+    // console.log(id);
+    console.log(`${URL_WP}${USER+id}`);
+    await api.get(`${URL_WP}${USER+id}`).then((res) => {
+      console.log(res);
+      if (res.status === 200) commit("setUser", res.data);
     });
   },
 };

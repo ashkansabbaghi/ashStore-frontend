@@ -145,3 +145,8 @@
 .v-slide-group__next {
   z-index: 1;
 }
+
+.slick-list{
+  overflow: visible !important;
+  contain: layout !important;
+}

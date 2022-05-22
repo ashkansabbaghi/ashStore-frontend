@@ -4,4 +4,5 @@ export default {
   gBlog: (state) => state.blog,
   gCats: (state) => state.categories,
   gUsers: (state) => state.users,
+  gUser: (state) => state.user,
 };

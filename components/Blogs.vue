@@ -8,10 +8,21 @@
     transition="fade-transition"
   >
     <v-card class="cart-blog mx-auto mt-10">
-      <!--  user in single blog -->
-      <template >
-        <span class="font-weight-bold text-lowercase username">{{user.name}}</span>
+      <!--  user in list blog -->
+      <template v-if="more">
+        <template v-if="findUser(blog.author)">
+          <span
+            class="font-weight-bold text-lowercase username"
+            v-text="user"
+          ></span>
+        </template>
+        <template v-else>
+          <span class="font-weight-bold text-lowercase username"
+            >not found user</span
+          >
+        </template>
       </template>
+
       <!-- slider image post -->
       <v-carousel
         class="carousel-blog"
@@ -45,10 +56,10 @@
       </v-list-item-avatar>
 
       <!-- info blog -->
-      <v-list-item class="pa-0 mb-16" three-line>
+      <v-list-item class="pa-4 mb-16" three-line>
         <v-list-item-content class="info-blog pa-0">
           <h5
-            class="title-blog txt-black mb-3 mt-5 dir-rtl"
+            class="title-blog txt-black mb-5 mt-5 dir-rtl"
             v-html="blog.title.rendered"
           ></h5>
           <p
@@ -56,6 +67,23 @@
             :class="{ txt_overflow_line_2: more }"
             v-html="content"
           ></p>
+          <v-btn
+            rounded
+            elevation="0"
+            class="mt-3"
+            v-if="more"
+            @click="clickMore()"
+            >more
+          </v-btn>
+          <!-- update seller and admin -->
+          <v-btn
+            rounded
+            elevation="0"
+            class="mt-3"
+            v-if="!more"
+            @click="clickUpdateBlog()"
+            >update blog
+          </v-btn>
           <div class="d-flex justify-space-between pt-7 mb-6 footer-blog">
             <span class="txt-gray" v-text="blog.date"></span>
             <div v-for="(c, i) in blog.categories" :key="i">
@@ -73,7 +101,7 @@
 <script>
 import { mapGetters } from "vuex";
 export default {
-  props: ["blog", "more", "categories", "user"],
+  props: ["blog", "more", "categories", "users"],
   data: () => ({
     model: null,
     blg: {},
@@ -100,16 +128,16 @@ export default {
       this.category = cats.name;
       return true;
     },
-    // findUser(c) {
-    //   // console.log(c);
-    //   // console.log(this.users);
-    //   const user = this.users.find((u) => u.id == c);
-    //   this.user = user.name;
-    //   return true;
-    // },
+    findUser(c) {
+      // console.log(c);
+      // console.log(this.users);
+      const user = this.users.find((u) => u.id == c);
+      this.user = user.name;
+      return true;
+    },
     separator() {
       let m;
-      // console.log(this.blog);
+      console.log(this.blog);
       const info = this.blog.content.rendered;
       let rex = /<img[^>]+src="http:\/\/([^">]+)/g;
       let rexTagImg = /<img[^>]*\/?>/g;

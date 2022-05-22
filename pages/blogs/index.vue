@@ -134,7 +134,7 @@
             </v-col>
           </v-row>
         </v-container>
-        <Blog
+        <Blogs
           v-else
           v-for="blog in gBlogs"
           :key="blog.id"

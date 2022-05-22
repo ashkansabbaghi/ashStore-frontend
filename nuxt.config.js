@@ -5,14 +5,28 @@ export default {
   head: {
     titleTemplate: "%s - ashstore",
     title: "ashstore",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
+    meta: [{
+        charset: "utf-8"
+      },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1"
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: ""
+      },
+      {
+        name: "format-detection",
+        content: "telephone=no"
+      },
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+    link: [{
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      },
       // Iconfonts for Vuetify. You need to leave only which one you use
       {
         rel: "stylesheet",
@@ -39,7 +53,14 @@ export default {
   css: ["~assets/style/index"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{ src: "~/plugins/TiptapVuetify", mode: "client" }],
+  plugins: [{
+    src: "~/plugins/TiptapVuetify",
+    mode: "client"
+  }, {
+    src: "~/plugins/Carousel",
+    // mode: "client",
+    ssr: true
+  }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -78,6 +99,7 @@ export default {
       lang: "en",
     },
   },
+  loading: "@/components/LoadingPage.vue",
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
