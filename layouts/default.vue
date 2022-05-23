@@ -1,7 +1,7 @@
 <template>
   <v-app class="bg-light">
     <div class="container-main">
-      <TheHeader />
+      <TheHeaderSearch />
 
       <Nuxt keep-alive/>
 

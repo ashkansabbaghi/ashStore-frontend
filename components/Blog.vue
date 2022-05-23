@@ -9,8 +9,11 @@
   >
     <v-card class="cart-blog mx-auto mt-10">
       <!--  user in single blog -->
-      <template >
-        <span class="font-weight-bold text-lowercase username">{{user.name}}</span>
+      <template>
+        <span
+          class="font-weight-bold text-lowercase username"
+          v-text="user.name"
+        ></span>
       </template>
       <!-- slider image post -->
       <v-carousel

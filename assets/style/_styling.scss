@@ -119,10 +119,19 @@ a.nuxt-link-exact-active {
 
 }
 
+@include responsive(min) {
+  .footer-custom {
+    svg {
+      width: 18px;
+    }
+  }
+}
+
 /* ****************** home ********************** */
 .home,
 .blog,
-.profile {
+.profile,
+.category {
   margin-top: 120px !important;
   padding: 0 !important;
 
@@ -356,34 +365,130 @@ a.nuxt-link-exact-active {
 
 /* ****************** login ******************** */
 .login {
-  margin-top: 50px;
 
-  .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100vh;
-  }
-
-  .welcome {
-    text-align: center;
-    font-weight: bold;
-    font-size: 45px;
-    letter-spacing: 4px !important;
-    color: $txt_black;
-  }
-
-  .text {
+  .back {
+    width: 500px;
+    margin: auto;
     position: relative;
-    top: -5px;
-    color: $txt_black;
-    font-size: 12px;
-    font-weight: bold;
-    text-align: center;
+    max-width: 600px;
+    // position: absolute;
+    padding-left: 15px;
+    top: 35px;
+    font-size: 10px;
+  }
+
+  .header {
+    margin-top: 50px;
+
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100vh;
+    }
+
+    .logo {
+      margin: auto;
+      display: block;
+      width: 250px;
+      height: auto;
+    }
+
+    .welcome {
+      text-align: center;
+      font-weight: bold;
+      font-size: 45px;
+      letter-spacing: 4.5px !important;
+      color: $txt_black;
+    }
+
+    .text {
+      position: relative;
+      top: -5px;
+      color: $txt_black;
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
   }
 
   .v-input__slot {
     background: #F8F8F8 !important;
     box-shadow: none !important;
+  }
+}
+
+@include responsive(s) {
+  .login {
+
+    .header {
+      margin-top: 40px;
+
+      .logo {
+        width: 170px;
+      }
+
+      .welcome {
+        font-size: 35px;
+
+      }
+
+      .text {
+        font-size: 10px;
+
+      }
+
+    }
+
+
+  }
+}
+
+/* ****************** category ******************** */
+.category {
+
+  width: calc(100% - 50px);
+  margin: auto;
+
+
+  .header {
+    background-color: $color_secondary !important;
+    box-shadow: -1px 5px 50px -15px $color_secondary !important;
+    height: 250px;
+  }
+
+  .item {
+    background-color: $color_gray_9 !important;
+    box-shadow: none !important;
+    height: 130px !important;
+
+    .txt {
+      font-size: 14px;
+
+    }
+
+    .active-txt {
+      color: $color_w;
+      font-size: 16px;
+
+      p {
+        color: $bg_light;
+        font-size: 10px;
+        margin : 0 !important;
+      }
+    }
+
+    &.primary {
+      background-color: $color_secondary !important;
+      box-shadow: -1px 5px 50px -15px $color_secondary !important;
+      transition: 0.5s;
+
+    }
+  }
+
+  .primary {
+    background-color: transparent !important;
   }
 }

@@ -129,8 +129,6 @@ export default {
       return true;
     },
     findUser(c) {
-      // console.log(c);
-      // console.log(this.users);
       const user = this.users.find((u) => u.id == c);
       this.user = user.name;
       return true;

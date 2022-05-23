@@ -68,6 +68,10 @@
   color: $txt_gray;
 }
 
+.txt-white {
+  color: $color_w !important;
+}
+
 .txt-second {
   color: $color_secondary !important;
 }
@@ -79,6 +83,9 @@
   background-color: $color_secondary !important;
 }
 
+.c-pointer {
+  cursor: pointer !important;
+}
 
 /* ******************** elem ********************* */
 
@@ -88,6 +95,10 @@
 
 .w-90 {
   width: 90% !important;
+}
+
+.mw-calc-100-50 {
+  max-width: calc(100% -50px) !important;
 }
 
 .max-w-500 {
@@ -146,7 +157,22 @@
   z-index: 1;
 }
 
-.slick-list{
+.slick-list {
   overflow: visible !important;
   contain: layout !important;
+}
+
+/* ****************** focus link cart *********************** */
+
+.v-card--link {
+  &::before {
+    border-radius: $border_radius_default !important;
+  }
+
+  &:focus {
+
+    border-radius: $border_radius_default !important;
+
+  }
+
 }
