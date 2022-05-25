@@ -11,7 +11,7 @@ export default {
     commit
   }) {
     await api.get(`${URL_WP}${POST}`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       if (res.status === 200) commit("setBlogs", res.data);
     });
   },
@@ -29,7 +29,7 @@ export default {
     commit
   }) {
     await api.get(`${URL_WP}${USER}`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       if (res.status === 200) commit("setUsers", res.data);
     });
   },
@@ -47,10 +47,8 @@ export default {
   async getUser({
     commit
   }, id) {
-    // console.log(id);
-    console.log(`${URL_WP}${USER+id}`);
     await api.get(`${URL_WP}${USER+id}`).then((res) => {
-      console.log(res);
+      // console.log(res);
       if (res.status === 200) commit("setUser", res.data);
     });
   },

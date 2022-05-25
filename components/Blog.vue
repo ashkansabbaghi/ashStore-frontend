@@ -83,7 +83,6 @@ export default {
     images: [],
     content: "",
     category: "",
-    user: "",
     loading: false,
     isActive: false,
   }),
@@ -95,21 +94,11 @@ export default {
       this.$store.commit("core/setBack");
       this.$router.push(`/blogs/${this.blog.id}`);
     },
-    clickUpdateBlog() {
-      console.log("update blog");
-    },
     findCat(c) {
       const cats = this.categories.find((cat) => cat.id == c);
       this.category = cats.name;
       return true;
     },
-    // findUser(c) {
-    //   // console.log(c);
-    //   // console.log(this.users);
-    //   const user = this.users.find((u) => u.id == c);
-    //   this.user = user.name;
-    //   return true;
-    // },
     separator() {
       let m;
       // console.log(this.blog);

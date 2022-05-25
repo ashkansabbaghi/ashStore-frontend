@@ -1,5 +1,5 @@
 <template>
-  <v-item-group mandatory active-class="primary">
+   <v-item-group mandatory active-class="primary">
     <div class="category">
       <v-row class="ma-0">
         <!-- header -->
@@ -16,14 +16,16 @@
           <v-item v-slot="{ active, toggle }">
             <v-card class="item d-flex align-center" @click="toggle">
               <div v-if="!active" class="txt text-h6 flex-grow-1 text-center">
-                category{{n}}
+                category{{ n }}
               </div>
-              <!-- <v-fade-transition> -->
-              <div v-if="active" @click="openProducts" class="active-txt flex-grow-1 text-center">
-                <div class="">category{{n}} </div>
+              <div
+                v-if="active"
+
+                class="active-txt flex-grow-1 text-center"
+              >
+                <div class="">category{{ n }}</div>
                 <p>click</p>
               </div>
-              <!-- </v-fade-transition> -->
             </v-card>
           </v-item>
         </v-col>
@@ -34,13 +36,6 @@
 
 <script>
 export default {
-  name: "category",
-  methods: {
-    openProducts(){
-      console.log("click category");
-      this.$router.push("/products");
-
-    }
-  }
+  layout: "default",
 };
 </script>

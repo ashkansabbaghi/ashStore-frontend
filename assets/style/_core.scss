@@ -112,6 +112,9 @@
 .border-radius-20 {
   border-radius: $border_radius_default !important;
 }
+.border-radius-none {
+  border-radius: 0px !important;
+}
 
 .bg-none {
   background: none !important;

@@ -135,7 +135,6 @@ export default {
     },
     separator() {
       let m;
-      console.log(this.blog);
       const info = this.blog.content.rendered;
       let rex = /<img[^>]+src="http:\/\/([^">]+)/g;
       let rexTagImg = /<img[^>]*\/?>/g;

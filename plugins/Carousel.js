@@ -9,4 +9,3 @@ export default ({
 }) => {
   Vue.use(VueSlickCarousel)
 }
-// Vue.use(VueSlickCarousel)

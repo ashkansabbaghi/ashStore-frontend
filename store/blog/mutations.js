@@ -19,7 +19,6 @@ export default {
     state.users = users
   },
   setUser(state, user) {
-    console.log(user);
     state.user = user
   },
 };

@@ -58,7 +58,7 @@ export default {
     mode: "client"
   }, {
     src: "~/plugins/Carousel",
-    // mode: "client",
+    mode: "client",
     ssr: true
   }],
 

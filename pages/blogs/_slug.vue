@@ -2,7 +2,7 @@
   <v-container class="blog">
     <v-row class="ma-0" justify="center" align="center">
       <v-col class="pa-0" cols="12" sm="12">
-        <SkeletonLoader v-if="$fetchState.pending" />
+        <SkeletonBlog v-if="$fetchState.pending" />
         <v-container v-else-if="$fetchState.error" class="pa-0">
           <v-row class="ma-auto" justify="center" align="center">
             <c-col class="w-100 text-center" sm="12">
@@ -170,12 +170,10 @@ export default {
 
   async asyncData() {},
   async fetch() {
-    // console.log(this.$route.params.slug); //27
 
     const promises = [
       await this.getBlog(this.$route.params.slug),
       await this.getCategories(),
-      // await this.getUser(),
     ];
     await Promise.all(promises)
       .then((res) => console.log(res))

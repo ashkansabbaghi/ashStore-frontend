@@ -1,5 +1,6 @@
 @import "var";
 @import "responsive";
+@import "mixin";
 
 
 /* ****************** header ********************** */
@@ -452,11 +453,35 @@ a.nuxt-link-exact-active {
   width: calc(100% - 50px);
   margin: auto;
 
+  @include keyframes(pulse-bg) {
+    0% {
+      background-color: $color_secondary;
+      transform: scale(0.99);
+      box-shadow: 0 0 0 0 #04789b;
+
+      // opacity: 1;
+    }
+
+    70% {
+      background-color: #0a8eb6;
+      transform: scale(1);
+      box-shadow: 0 0 0 10px #04789b00;
+      // opacity: 0;
+    }
+
+    100% {
+      background-color: $color_secondary;
+      transform: scale(0.99);
+      box-shadow: 0 0 0 0 #04789b00;
+    }
+  }
 
   .header {
-    background-color: $color_secondary !important;
-    box-shadow: -1px 5px 50px -15px $color_secondary !important;
+    // box-shadow: -1px 5px 50px -15px $color_secondary !important;
     height: 250px;
+    color: $color_w !important;
+
+    @include animation('pulse-bg 2s infinite');
   }
 
   .item {
@@ -465,7 +490,8 @@ a.nuxt-link-exact-active {
     height: 130px !important;
 
     .txt {
-      font-size: 14px;
+
+      font-size: 16px !important;
 
     }
 
@@ -474,9 +500,13 @@ a.nuxt-link-exact-active {
       font-size: 16px;
 
       p {
+        position: absolute;
+        bottom: 15px;
+        left: 50% !important;
+        transform: translate(-50%, 0) !important;
         color: $bg_light;
         font-size: 10px;
-        margin : 0 !important;
+        margin: 0 !important;
       }
     }
 
@@ -491,4 +521,26 @@ a.nuxt-link-exact-active {
   .primary {
     background-color: transparent !important;
   }
+}
+
+
+/* ****************** product list ******************** */
+
+
+
+/* ********************* product ********************** */
+.product {
+  border-radius: 0 !important;
+
+  .carousel-product {
+    border-radius: 0 !important;
+    box-shadow: $shadow_image_org !important;
+    height: calc(100vh-50px);
+  }
+
+  .v-carousel__controls {
+    background: linear-gradient(360deg, #014f6783, transparent) !important;
+    border-radius: 0 !important;
+  }
+
 }
