@@ -1,13 +1,5 @@
 <template>
   <div>
-  <!-- <v-lazy
-    v-model="isActive"
-    :options="{
-      threshold: 0.5,
-    }"
-    min-height="200"
-    transition="fade-transition"
-  > -->
     <h3 class="title-carousel pb-11">DISCOUNT PRODUCT</h3>
     <SlotCarouselNo>
       <div class="slide-group-custom pr-6 pl-6" v-for="i in 6" :key="i">
@@ -57,7 +49,6 @@
         </v-card>
       </div>
     </SlotCarouselNo>
-  <!-- </v-lazy> -->
   </div>
 </template>
 <script>

@@ -1,19 +1,19 @@
 <template>
   <v-app class="bg-light">
     <div class="container-main">
-      <TheHeaderSearch />
+      <TheHeaderBack />
 
       <Nuxt keep-alive/>
 
       <TheFooterFadeBottom />
-      <TheFooter />
+      <TheFooterBtn />
     </div>
   </v-app>
 </template>
 
 <script>
 export default {
-  name: "DefaultLayout",
+  name: "child",
   data() {
     return {};
   },

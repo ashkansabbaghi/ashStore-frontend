@@ -5,7 +5,7 @@
 
       <Nuxt keep-alive />
 
-      <FadeContentBottom />
+      <TheFooterFadeBottom />
       <TheFooter />
     </div>
   </v-app>

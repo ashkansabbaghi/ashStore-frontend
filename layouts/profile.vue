@@ -2,9 +2,9 @@
   <v-app class="bg-light">
     <div class="container-main">
       <TheHeaderProfile />
-      <FadeContentTop />
+      <TheHeaderFadeTop />
 
-      <Nuxt keep-alive/>
+      <Nuxt keep-alive />
 
       <!-- <FadeContentBottom /> -->
       <!-- <TheFooter /> -->
@@ -18,5 +18,5 @@ export default {
   data() {
     return {};
   },
-}
+};
 </script>

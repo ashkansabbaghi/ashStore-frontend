@@ -38,6 +38,11 @@
   padding: 25px !important;
 }
 
+/* ******************** padding ********************* */
+.pa-10-20 {
+  padding: 10px 20px !important;
+}
+
 /* ******************** typography ********************* */
 
 .dir-rtl {
@@ -76,6 +81,10 @@
   color: $color_secondary !important;
 }
 
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
 /* ******************** bg btn ********************* */
 
 .bg-color-second {
@@ -112,6 +121,7 @@
 .border-radius-20 {
   border-radius: $border_radius_default !important;
 }
+
 .border-radius-none {
   border-radius: 0px !important;
 }
