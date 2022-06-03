@@ -2,7 +2,7 @@
   <div>
     <h3 class="title-carousel">HOT PRODUCT</h3>
     <SlotCarouselSm>
-      <div class="slide-group-custom pr-6 pl-6" v-for="i in 6" :key="i">
+      <div class="slide-group-custom" v-for="i in 6" :key="i">
         <v-card
           @click="product()"
           class="card-slid-custom mr-8"

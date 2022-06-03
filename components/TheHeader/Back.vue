@@ -1,5 +1,5 @@
 <template>
-    <v-app-bar class="header-custom" fixed>
+    <v-app-bar class="header-custom" style="opacity : 0.6" fixed>
         <!-- back -->
         <template >
             <!-- btn back -->

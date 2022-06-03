@@ -6,20 +6,20 @@
       :show-arrows="false"
       hide-delimiter-background
       delimiter-icon="mdi-minus"
-      height="80vh"
+      height="auto"
       v-if="images.length >= 1"
     >
       <v-carousel-item v-for="(image, i) in images" :key="i">
         <v-sheet class="bg-none" height="100%">
           <v-row class="fill-height ma-0" align="center" justify="center">
-            <v-img
+            <img
               :src="image.src"
               :lazy-src="require('@/static/svg/logo_and_text.svg')"
-              width="auto"
-              height="100%"
+              width="100%"
+              height="auto"
               class=""
-            >
-            </v-img>
+            />
+            <!-- </img> -->
           </v-row>
         </v-sheet>
       </v-carousel-item>
@@ -42,7 +42,7 @@
       </v-card-title>
 
       <v-card-text class="pa-10-20">
-        <v-row align="center" class="mx-0">
+        <v-row align="center" class="flex-nowrap mx-0">
           <v-rating
             :value="0"
             background-color="#DA8907"
@@ -62,11 +62,11 @@
           </div>
 
           <v-btn-toggle class="ml-auto" v-model="toggle_exclusive" rounded>
-            <v-btn small color="#0687AF">
+            <v-btn  x-small color="#0687AF">
               <v-icon color="#fff">mdi-minus</v-icon>
             </v-btn>
-            <v-btn small> 1 </v-btn>
-            <v-btn small color="#0687AF">
+            <v-btn x-small> 1 </v-btn>
+            <v-btn  x-small color="#0687AF">
               <v-icon color="#fff">mdi-plus</v-icon>
             </v-btn>
           </v-btn-toggle>

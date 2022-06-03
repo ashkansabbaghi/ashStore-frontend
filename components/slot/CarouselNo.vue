@@ -16,7 +16,7 @@ export default {
       // centerMode: true,
       focusOnSelect: true,
       infinite: false,
-      slidesToShow: 2.5,
+      slidesToShow: 2.2,
       slidesToScroll: 1,
       dots: false,
 
@@ -39,9 +39,17 @@ export default {
           },
         },
         {
+          breakpoint: 700,
+          settings: {
+            slidesToShow: 1.6,
+            // slidesToScroll: 1,
+            initialSlide: 2,
+          },
+        },
+        {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1.4,
+            slidesToShow: 1.3,
             slidesToScroll: 1,
           },
         },
@@ -55,7 +63,7 @@ export default {
         {
           breakpoint: 380,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 0.95,
             slidesToScroll: 1,
           },
         },

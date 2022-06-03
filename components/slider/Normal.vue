@@ -2,11 +2,12 @@
   <div>
     <h3 class="title-carousel pb-11">DISCOUNT PRODUCT</h3>
     <SlotCarouselNo>
-      <div class="slide-group-custom pr-6 pl-6" v-for="i in 6" :key="i">
+      <div class="slide-group-custom" v-for="i in 6" :key="i">
         <v-card
           @click="test"
           class="card-slid-custom mr-8"
           min-height="350px"
+          min-width="320px"
           width="320px"
         >
           <img class="img-custom two w-100" src="@/static/img/img-2.jpg" />
@@ -14,7 +15,7 @@
             <span class="white--text caption">%25</span>
           </v-avatar>
           <div class="card-info-two">
-            <v-card-title class="title txt-overflow display-block"
+            <v-card-title class="cart-title txt-overflow display-block"
               >discount product name discount product name discount product
               name</v-card-title
             >

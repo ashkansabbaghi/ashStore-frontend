@@ -19,7 +19,7 @@ export default {
       infinite: true,
       slidesToShow: 2.5,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 4500,
       pauseOnDotsHover: true,
       pauseOnFocus: true,
       pauseOnHover: true,
@@ -58,8 +58,9 @@ export default {
         {
           breakpoint: 380,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
+            slidesToShow: 0.98,
+            // slidesToScroll: 1,
+            centerMode: false,
           },
         },
       ],

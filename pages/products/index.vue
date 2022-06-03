@@ -10,26 +10,6 @@
         </v-col>
       </v-row>
 
-      <v-row class="ma-0 mt-8 mb-16 pb-5">
-        <!-- categories -->
-        <v-col v-for="n in 9" :key="n" cols="4" md="4" sm="4">
-          <v-item v-slot="{ active, toggle }">
-            <v-card class="item d-flex align-center" @click="toggle">
-              <div v-if="!active" class="txt text-h6 flex-grow-1 text-center">
-                category{{ n }}
-              </div>
-              <div
-                v-if="active"
-
-                class="active-txt flex-grow-1 text-center"
-              >
-                <div class="">category{{ n }}</div>
-                <p>click</p>
-              </div>
-            </v-card>
-          </v-item>
-        </v-col>
-      </v-row>
     </div>
   </v-item-group>
 </template>

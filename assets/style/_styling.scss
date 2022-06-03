@@ -1,6 +1,7 @@
 @import "var";
 @import "responsive";
 @import "mixin";
+@import "keyframes";
 
 
 /* ****************** header ********************** */
@@ -9,7 +10,6 @@
   margin-top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0) !important;
-  // width: 90% !important;
   width: calc(100% - 50px);
 
   background: $color_w !important;
@@ -27,6 +27,8 @@
     margin-left: 30px;
     font-size: $font_small;
     color: $txt_gray !important;
+    width: 100% !important;
+
 
     .bold-search {
       margin-left: 10px;
@@ -36,6 +38,7 @@
 
   .input-custom {
     margin-left: 30px;
+    width: 100% !important;
 
     &:focus-visible {
       outline: 0 !important;
@@ -54,13 +57,32 @@
   background-color: $bg_light !important;
 }
 
+@include responsive(min) {
+  .header-custom {
+    width: calc(100% - 20px);
+
+    .search {
+      margin-left: 10px;
+      font-size: $font_s_txt;
+
+    }
+
+    .input-custom {
+      margin-left: 10px;
+    }
+
+
+
+
+  }
+}
+
 /* ****************** footer ********************** */
 .footer-custom {
   bottom: 30px !important;
   margin-top: 0px !important;
   left: 50% !important;
   transform: translate(-50%, 0) !important;
-  // width: 90% !important;
   width: calc(100% - 50px);
 
 
@@ -147,6 +169,7 @@ a.nuxt-link-exact-active {
   position: fixed;
   width: 100%;
   bottom: 0;
+  right: 0;
   height: 120px;
   background: $linear_fade_content_bottom;
   z-index: 1;
@@ -161,6 +184,8 @@ a.nuxt-link-exact-active {
 
 @include responsive(min) {
   .footer-custom {
+    width: calc(100% - 20px);
+
     svg {
       width: 18px;
     }
@@ -174,12 +199,12 @@ a.nuxt-link-exact-active {
 .category {
   margin-top: 120px !important;
   padding: 0 !important;
-
 }
 
 /* ************** carousel **************** */
 .slide-group-custom {
   background: $bg_light;
+  padding: 0px !important;
 
   .img-custom {
     border-radius: 20px;
@@ -258,9 +283,7 @@ a.nuxt-link-exact-active {
   width: 100%;
   padding: 15px;
 
-
-
-  .title {
+  .cart-title {
     font-weight: bold !important;
     padding: 0;
   }
@@ -268,6 +291,20 @@ a.nuxt-link-exact-active {
   .content {
     padding: 10px 0 0 !important;
 
+  }
+}
+
+@include responsive(s) {
+  .card-info-two {
+
+    .cart-title {
+      font-size: 14px !important;
+    }
+
+    .content {
+      font-size: 12px !important;
+
+    }
   }
 }
 
@@ -311,28 +348,11 @@ a.nuxt-link-exact-active {
     position: relative;
   }
 
-  @include responsive(s) {
-    .username {
-      font-size: $font_s_txt !important
-    }
 
-    .title-blog {
-      font-size: $font_s_title !important;
-    }
-
-    .text-blog {
-      font-size: $font_s_txt !important;
-
-    }
-
-    .footer-blog {
-      font-size: $font_s_small !important;
-    }
-  }
 }
 
 .v-carousel__controls {
-  background: linear-gradient(360deg, #014f6783, transparent) !important;
+  background: linear-gradient(360deg, #00000091, transparent) !important;
   border-radius: 0 0 $border_radius_default $border_radius_default !important;
 }
 
@@ -356,6 +376,30 @@ a.nuxt-link-exact-active {
   img {
     width: 40px !important;
     height: auto !important;
+  }
+}
+
+@include responsive(s) {
+  .cart-blog {
+  width: calc(100% - 20px);
+
+    .username {
+      font-size: $font_s_txt !important
+    }
+
+    .title-blog {
+      font-size: $font_s_title !important;
+    }
+
+    .text-blog {
+      font-size: $font_s_txt !important;
+
+    }
+
+    .footer-blog {
+      font-size: $font_s_small !important;
+    }
+
   }
 }
 
@@ -492,35 +536,34 @@ a.nuxt-link-exact-active {
   width: calc(100% - 50px);
   margin: auto;
 
-  @include keyframes(pulse-bg) {
-    0% {
-      background-color: $color_secondary;
-      transform: scale(0.99);
-      box-shadow: 0 0 0 0 #04789b;
+  // @include keyframes(pulse-bg) {
+  //   0% {
+  //     background-color: $color_secondary;
+  //     transform: scale(0.99);
+  //     box-shadow: 0 0 0 0 #04789b;
 
-      // opacity: 1;
-    }
+  //     // opacity: 1;
+  //   }
 
-    70% {
-      background-color: #0a8eb6;
-      transform: scale(1);
-      box-shadow: 0 0 0 10px #04789b00;
-      // opacity: 0;
-    }
+  //   70% {
+  //     background-color: #0a8eb6;
+  //     transform: scale(1);
+  //     box-shadow: 0 0 0 10px #04789b00;
+  //     // opacity: 0;
+  //   }
 
-    100% {
-      background-color: $color_secondary;
-      transform: scale(0.99);
-      box-shadow: 0 0 0 0 #04789b00;
-    }
-  }
+  //   100% {
+  //     background-color: $color_secondary;
+  //     transform: scale(0.99);
+  //     box-shadow: 0 0 0 0 #04789b00;
+  //   }
+  // }
 
   .header {
-    // box-shadow: -1px 5px 50px -15px $color_secondary !important;
     height: 250px;
     color: $color_w !important;
 
-    @include animation('pulse-bg 2s infinite');
+    @include animation('pulse-cat-dic 2s infinite');
   }
 
   .item {
@@ -537,6 +580,24 @@ a.nuxt-link-exact-active {
     .active-txt {
       color: $color_w;
       font-size: 16px;
+
+      .anim-click {
+        // color: $color_w !important;
+        // bottom: -15px;
+        // font-size: 12px;
+        opacity: 0.4;
+        @include animation('pulse-cat-click 2s infinite');
+
+        position: absolute;
+        bottom: 25px;
+        border-radius: 50px;
+        width: 10px !important;
+        height: 10px !important;
+        left: 50% !important;
+        transform: translate(-50%, 0) !important;
+
+
+      }
 
       p {
         position: absolute;
@@ -562,6 +623,24 @@ a.nuxt-link-exact-active {
   }
 }
 
+@include responsive(min) {
+  .category {
+    width: calc(100% - 20px);
+
+    .item {
+
+      .txt {
+        font-size: $font_s_txt !important;
+      }
+
+      .active-txt {
+        font-size: $font_s_txt !important;
+
+      }
+    }
+
+  }
+}
 
 /* ****************** product list ******************** */
 
@@ -580,8 +659,7 @@ a.nuxt-link-exact-active {
   .v-carousel__controls {
     background: linear-gradient(360deg, #0000009a, transparent) !important;
     border-radius: 0 !important;
-    height: 20%;
-    // bottom: 15px;
+    height: 80px;
   }
 
   .product-card {
@@ -704,6 +782,10 @@ a.nuxt-link-exact-active {
 
       .product-description {
         font-size: 12px !important;
+      }
+
+      .txt-cat {
+        font-size: $font_s_small !important;
       }
     }
 

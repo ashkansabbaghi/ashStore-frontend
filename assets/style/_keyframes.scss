@@ -1,0 +1,44 @@
+// category header
+@include keyframes(pulse-cat-dic) {
+  0% {
+    background-color: $color_secondary;
+    transform: scale(0.99);
+    box-shadow: 0 0 0 0 #04789b;
+    // opacity: 1;
+  }
+
+  70% {
+    background-color: #0a8eb6;
+    transform: scale(1);
+    box-shadow: 0 0 0 10px #04789b00;
+    // opacity: 0;
+  }
+
+  100% {
+    background-color: $color_secondary;
+    transform: scale(0.99);
+    box-shadow: 0 0 0 0 #04789b00;
+  }
+}
+
+// category item click
+@include keyframes(pulse-cat-click) {
+    0% {
+      background-color: $bg_light;
+      transform: scale(0.99);
+      box-shadow: 0 0 0 0 #e8e8e8;
+    }
+
+    70% {
+    //   background-color: #0a8eb6;
+      transform: scale(1);
+      box-shadow: 0 0 0 15px #ffffff00;
+    }
+
+    100% {
+    // background-color: $bg_light;
+      background-color: $color_secondary;
+      transform: scale(0.99);
+      box-shadow: 0 0 0 0 #ffffff00;
+    }
+  }

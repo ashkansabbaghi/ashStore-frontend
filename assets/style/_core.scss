@@ -38,6 +38,13 @@
   padding: 25px !important;
 }
 
+@include responsive(min) {
+  .container {
+    max-width: 900px !important;
+    padding: 10px !important;
+  }
+}
+
 /* ******************** padding ********************* */
 .pa-10-20 {
   padding: 10px 20px !important;

@@ -6,6 +6,7 @@
       <v-btn @click="focusInput()" icon v-ripple="{ class: `primary--text` }">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
+
       <!-- text search -->
       <h6 v-show="toggleSearch" @click="focusInput()" class="search">
         search in
