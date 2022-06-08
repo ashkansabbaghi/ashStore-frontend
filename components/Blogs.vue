@@ -53,7 +53,8 @@
       <!-- avatar -->
       <v-list-item-avatar class="avatar-blog" size="60">
         <!-- <img src="@/static/img/avatar_1.png" alt="" /> -->
-        <img src="./../static/img/avatar_1.png" alt="" />
+        <img src="/_nuxt/static/img/avatar_1.png" alt="avatar-profile" />
+
       </v-list-item-avatar>
 
       <!-- info blog -->
