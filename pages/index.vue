@@ -4,6 +4,7 @@
     <NotConnection v-else-if="$fetchState.error" />
     <v-container v-else>
       <!-- slider top -->
+
       <v-row class="ma-0" justify="center" align="center">
         <v-col class="pa-0" cols="12" sm="12">
           <v-lazy
