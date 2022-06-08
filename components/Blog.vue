@@ -44,7 +44,8 @@
 
       <!-- avatar -->
       <v-list-item-avatar class="avatar-blog" size="60">
-        <img :src="require('~/static/img/avatar_1.png')" alt="" />
+        <!-- <img :src="require('~/static/img/avatar_1.png')" alt="" /> -->
+        <img src="./../static/img/avatar_1.png" alt="avatar-profile" />
       </v-list-item-avatar>
 
       <!-- info blog -->
