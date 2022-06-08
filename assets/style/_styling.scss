@@ -536,29 +536,6 @@ a.nuxt-link-exact-active {
   width: calc(100% - 50px);
   margin: auto;
 
-  // @include keyframes(pulse-bg) {
-  //   0% {
-  //     background-color: $color_secondary;
-  //     transform: scale(0.99);
-  //     box-shadow: 0 0 0 0 #04789b;
-
-  //     // opacity: 1;
-  //   }
-
-  //   70% {
-  //     background-color: #0a8eb6;
-  //     transform: scale(1);
-  //     box-shadow: 0 0 0 10px #04789b00;
-  //     // opacity: 0;
-  //   }
-
-  //   100% {
-  //     background-color: $color_secondary;
-  //     transform: scale(0.99);
-  //     box-shadow: 0 0 0 0 #04789b00;
-  //   }
-  // }
-
   .header {
     height: 250px;
     color: $color_w !important;
@@ -582,9 +559,6 @@ a.nuxt-link-exact-active {
       font-size: 16px;
 
       .anim-click {
-        // color: $color_w !important;
-        // bottom: -15px;
-        // font-size: 12px;
         opacity: 0.4;
         @include animation('pulse-cat-click 2s infinite');
 
