@@ -1,42 +1,23 @@
 <template>
-  <!-- <v-sheet background="transparent"> -->
-  <!-- <v-slide-group
-      v-model="model"
-      class="slide-group-custom"
-      center-active="true"
-      hide-delimiter-background
-      show-arrows-on-hover
-      :show-arrows="false"
-      multiple="true"
-
-    >
-      <v-slide-item v-for="i in 6" :key="i">
-        <v-card class="card-slid-custom" max-width="300" @click="test">
-          <img class="img-custom" src="@/static/img/img-4.jpg" />
-        </v-card>
-      </v-slide-item>
-    </v-slide-group> -->
-
-  <SlotCarouselTimer  >
-    <div v-for="i in 6" :key="i" max-width="400px">
-      <v-card class="card-slid-custom"  @click="test">
-        <img class="img-custom w-100" src="@/static/img/img-4.jpg" />
+  <SlotCarouselTimer>
+    <div v-for="(v,i) in imgs" :key="i" max-width="400px">
+      <v-card class="card-slid-custom shadow-none" @click="test">
+        <img class="img-custom w-100" :src="require(`@/static/img/${v.url}`)" />
       </v-card>
     </div>
   </SlotCarouselTimer>
-
-  <!-- </v-sheet> -->
 </template>
 
 
 <script>
-// import VueSlickCarousel from "vue-slick-carousel";
-// import "vue-slick-carousel/dist/vue-slick-carousel.css";
-// optional style for arrows & dots
-// import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 export default {
   data: () => ({
     model: null,
+    imgs: [
+      { url: "img-h-1.png", alt: "image-header" },
+      { url: "img-h-2.png", alt: "image-header" },
+      { url: "img-h-3.png", alt: "image-header" },
+    ],
     settings: {
       centerMode: true,
       focusOnSelect: true,
@@ -49,12 +30,18 @@ export default {
       pauseOnHover: true,
     },
   }),
+  // computed: {
+  //      getImage(imageURL){
+  //           return require(imageURL);
+  //       }
+  // },
   methods: {
     test: () => {
       console.log("test clickItem");
     },
+    // getImage(imageURL) {
+    //    require(imageURL);
+    // },
   },
-  // components: { VueSlickCarousel },
-
 };
 </script>

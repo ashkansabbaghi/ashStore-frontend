@@ -5,7 +5,7 @@
       <div class="slide-group-custom" v-for="i in 6" :key="i">
         <v-card
           @click="product()"
-          class="card-slid-custom mr-8"
+          class="card-slid-custom shadow-none mr-8"
           width="160px"
           height="150px"
         >

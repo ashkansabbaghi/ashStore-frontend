@@ -246,6 +246,11 @@ a.nuxt-link-exact-active {
   border-radius: 20px !important;
   margin: 0 25px 0 0px !important;
   box-shadow: $shadow_cart_org !important;
+  background-color: transparent !important;
+
+  &.shadow-none {
+    box-shadow: none !important;
+  }
 
 
   &:focus {
@@ -381,7 +386,7 @@ a.nuxt-link-exact-active {
 
 @include responsive(s) {
   .cart-blog {
-  width: calc(100% - 20px);
+    width: calc(100% - 20px);
 
     .username {
       font-size: $font_s_txt !important
@@ -652,6 +657,7 @@ a.nuxt-link-exact-active {
       height: 4px;
       background-color: $color_gray !important;
       margin: auto;
+      margin-top: 15px;
     }
 
     .product-dic {
