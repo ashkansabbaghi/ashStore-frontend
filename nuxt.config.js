@@ -2,6 +2,8 @@ import colors from "vuetify/es5/util/colors";
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
+
   head: {
     titleTemplate: "%s - ashstore",
     title: "ashstore",
@@ -22,7 +24,8 @@ export default {
         content: "telephone=no"
       },
     ],
-    link: [{
+    link: [
+      {
         rel: "icon",
         type: "image/x-icon",
         href: "/favicon.ico"
@@ -43,7 +46,6 @@ export default {
     ],
   },
 
-  target: 'static',
 
   router: {
     base: "/",
@@ -95,6 +97,7 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: { source: '~/static/icon.png' },
     manifest: {
       lang: "en",
     },

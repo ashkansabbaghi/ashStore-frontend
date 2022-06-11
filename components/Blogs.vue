@@ -36,14 +36,27 @@
         <v-carousel-item v-for="(image, i) in images" :key="i">
           <v-sheet class="bg-none" height="100%">
             <v-row class="fill-height ma-0" align="center" justify="center">
+              <!-- :lazy-src="require('@/static/svg/logo_and_text.svg')" -->
               <v-img
                 :src="setImage(image)"
-                :lazy-src="require('@/static/svg/logo_and_text.svg')"
                 width="auto"
                 height="100%"
                 contain
                 class="border-radius-20"
               >
+                <template v-slot:placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      :size="50"
+                      color="#0687AF"
+                      indeterminate
+                    ></v-progress-circular>
+                  </v-row>
+                </template>
               </v-img>
             </v-row>
           </v-sheet>
@@ -52,9 +65,7 @@
 
       <!-- avatar -->
       <v-list-item-avatar class="avatar-blog" size="60">
-        <!-- <img src="@/static/img/avatar_1.png" alt="" /> -->
-        <img src="/_nuxt/static/img/avatar_1.png" alt="avatar-profile" />
-
+        <img :src="require('~/static/img/Avatar_1.png')" alt="avatar-img" />
       </v-list-item-avatar>
 
       <!-- info blog -->

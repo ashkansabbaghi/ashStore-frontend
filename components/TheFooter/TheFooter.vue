@@ -23,7 +23,7 @@
         </NuxtLink>
 
         <!-- blog -->
-        <NuxtLink class="default-color-nuxt-link" @click.native="clickBlog" to="/blogs">
+        <NuxtLink class="default-color-nuxt-link svg-center" @click.native="clickBlog" to="/blogs">
             <v-btn icon v-ripple="{ class: `primary--text` }">
                 <svg class="svg" width="30" height="23" viewBox="0 0 35 28" xmlns="http://www.w3.org/2000/svg">
                     <path

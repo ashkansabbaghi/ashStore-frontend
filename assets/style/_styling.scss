@@ -189,6 +189,11 @@ a.nuxt-link-exact-active {
     svg {
       width: 18px;
     }
+    .svg-center{
+      svg {
+        width: 28px !important;
+      }
+    }
   }
 }
 
