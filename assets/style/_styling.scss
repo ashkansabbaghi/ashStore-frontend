@@ -189,7 +189,8 @@ a.nuxt-link-exact-active {
     svg {
       width: 18px;
     }
-    .svg-center{
+
+    .svg-center {
       svg {
         width: 28px !important;
       }
@@ -579,8 +580,13 @@ a.nuxt-link-exact-active {
         height: 10px !important;
         left: 50% !important;
         transform: translate(-50%, 0) !important;
+      }
 
-
+      .click-product {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
       }
 
       p {

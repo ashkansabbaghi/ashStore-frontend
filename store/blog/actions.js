@@ -1,5 +1,6 @@
 import api from "axios";
-let URL = "https://picsum.photos/v2/list";
+// let BaseURL = "http://api.ashkansabbaghi.ir/api/v1/"
+// let BaseURL = "http://localhost:8080/api/v1/"
 
 let URL_WP = "http://blog.ashkansabbaghi.ir/index.php?rest_route=/wp/v2/"
 let POST = "posts/";

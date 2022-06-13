@@ -18,13 +18,15 @@
               <div v-if="!active" class="txt text-h6 flex-grow-1 text-center">
                 category{{ n }}
               </div>
-              <div
-                v-if="active"
-                @click="openProducts()"
-                class="active-txt flex-grow-1 text-center"
-              >
+              <div v-if="active" class="active-txt flex-grow-1 text-center">
+                <NuxtLink
+                  class="click-product"
+                  width="100"
+                  height="100"
+                  to="/products/12345678"
+                ></NuxtLink>
                 <div class="">category{{ n }}</div>
-                <div class="anim-click"> </div>
+                <div class="anim-click"></div>
               </div>
             </v-card>
           </v-item>
@@ -35,13 +37,25 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
   name: "category",
-  methods: {
-    openProducts() {
-      console.log("click category");
-      this.$router.push("/products");
-    },
-  },
+
+  // data: () => ({
+  //   catId: "6262673b95a1856b75e8b353",
+  // }),
+  // computed: {
+  //   ...mapGetters("product", ["gProductsCat"]),
+  // },
+
+  // methods: {
+  //   ...mapActions("product", ["getProductOfCategory"]),
+  // },
+  // async fetch() {
+  //   await this.getProductOfCategory(this.catId);
+  //   // const promises = [await this.getProductOfCategory(this.catId)];
+  //   // await Promise.all(promises);
+  // },
 };
 </script>

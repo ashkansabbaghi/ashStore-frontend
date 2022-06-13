@@ -43,8 +43,8 @@ export default {
       await this.getUsers(),
     ];
     await Promise.all(promises)
-      .then((res) => console.log(res))
-      .catch((e) => console.log(e));
+      // .then((res) => console.log(res))
+      // .catch((e) => console.log(e));
   },
 };
 </script>

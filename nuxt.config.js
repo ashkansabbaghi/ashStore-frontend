@@ -8,21 +8,21 @@ export default {
     titleTemplate: "%s - ashstore",
     title: "ashstore",
     meta: [{
-        charset: "utf-8"
-      },
-      {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1"
-      },
-      {
-        hid: "description",
-        name: "description",
-        content: ""
-      },
-      {
-        name: "format-detection",
-        content: "telephone=no"
-      },
+      charset: "utf-8"
+    },
+    {
+      name: "viewport",
+      content: "width=device-width, initial-scale=1"
+    },
+    {
+      hid: "description",
+      name: "description",
+      content: ""
+    },
+    {
+      name: "format-detection",
+      content: "telephone=no"
+    },
     ],
     link: [
       {
@@ -83,7 +83,9 @@ export default {
     // https://go.nuxtjs.dev/content
     "@nuxt/content",
     // https://auth.nuxtjs.org/guide/setup#installation
-    '@nuxtjs/auth-next'
+    '@nuxtjs/auth-next',
+
+    '@nuxtjs/proxy',
   ],
   auth: {
     // Options
@@ -92,8 +94,14 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/",
+    // baseURL: "/",
+    proxy: true
   },
+  proxy: {
+    "/api/": 'http://localhost:8080/'
+  }
+  // '/api/': { target: 'http://localhost/3000', pathRewrite: { '^/api/': '' }, changeOrigin: true }
+  ,
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
