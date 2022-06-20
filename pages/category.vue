@@ -21,9 +21,7 @@
               <div v-if="active" class="active-txt flex-grow-1 text-center">
                 <NuxtLink
                   class="click-product"
-                  width="100"
-                  height="100"
-                  to="/products/12345678"
+                  to="/products"
                 ></NuxtLink>
                 <div class="">category{{ n }}</div>
                 <div class="anim-click"></div>

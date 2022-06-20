@@ -5,12 +5,11 @@
       <div class="slide-group-custom" v-for="i in 6" :key="i">
         <v-card
           @click="product()"
-          class="card-slid-custom shadow-none mr-8"
-          width="160px"
-          height="150px"
+          class="card-slid-custom card-small  shadow-none mr-8"
+
         >
           <img
-            class="img-custom"
+            class="img-custom img-small"
             src="@/static/img/img-4.jpg"
             alt="product image"
           />

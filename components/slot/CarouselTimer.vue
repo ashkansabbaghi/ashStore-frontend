@@ -20,7 +20,7 @@ export default {
       slidesToShow: 2.5,
       autoplay: true,
       autoplaySpeed: 4500,
-      pauseOnDotsHover: true,
+      // pauseOnDotsHover: true,
       pauseOnFocus: true,
       pauseOnHover: true,
       responsive: [

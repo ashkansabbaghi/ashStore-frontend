@@ -52,6 +52,22 @@
 
 /* ******************** typography ********************* */
 
+.txt-font-title {
+  font-size: $font_title
+}
+.txt-font-small {
+  font-size: $font_small
+}
+
+@include responsive(s) {
+  .txt-font-title {
+    font-size: $font_s_title
+  }
+  .txt-font-small {
+    font-size: $font_s_small
+  }
+}
+
 .dir-rtl {
   direction: rtl;
 }
@@ -91,6 +107,8 @@
 .letter-spacing-1 {
   letter-spacing: 1px;
 }
+
+
 
 /* ******************** bg btn ********************* */
 

@@ -18,6 +18,7 @@ export default {
       infinite: false,
       slidesToShow: 2.2,
       slidesToScroll: 1,
+      speed: 300,
       dots: false,
 
       responsive: [

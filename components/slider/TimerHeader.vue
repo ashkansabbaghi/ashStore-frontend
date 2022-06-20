@@ -1,7 +1,7 @@
 <template>
   <SlotCarouselTimer>
     <div v-for="(v, i) in imgs" :key="i" max-width="400px">
-      <v-card class="card-slid-custom shadow-none" @click="test()">
+      <v-card class="card-slid-custom card-normal shadow-none" @click="test()">
         <img class="img-custom w-100" :src="require(`@/static/img/${v.url}`)" />
       </v-card>
     </div>
@@ -22,7 +22,8 @@ export default {
       centerMode: true,
       focusOnSelect: true,
       infinite: true,
-      slidesToShow: 2,
+      // slidesToShow: 2,
+      speed:400,
       autoplay: true,
       autoplaySpeed: 3000,
       pauseOnDotsHover: true,

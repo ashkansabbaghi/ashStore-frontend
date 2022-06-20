@@ -14,7 +14,8 @@ export default {
     model: null,
     settings: {
       // centerMode: true,
-      focusOnSelect: true,
+      // focusOnSelect: true,
+      speed: 300,
       infinite: false,
       slidesToShow: 4.2,
       slidesToScroll: 1,
@@ -37,7 +38,7 @@ export default {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2.2,
+            slidesToShow: 2.8,
             slidesToScroll: 1,
           },
         },
@@ -51,7 +52,7 @@ export default {
         {
           breakpoint: 380,
           settings: {
-            slidesToShow: 1.4,
+            slidesToShow: 1.8,
             slidesToScroll: 1,
           },
         },
