@@ -5,7 +5,7 @@
     active-class="active"
     column
   >
-    <v-chip v-for="(w, i) in words" :key="i" >{{ w }}</v-chip>
+    <v-chip v-for="(w, i) in words" :key="i">{{ w }}</v-chip>
   </v-chip-group>
 </template>
 <script>
@@ -17,8 +17,3 @@ export default {
   methods: {},
 };
 </script>
-
-
-<style lang="scss" scoped>
-
-</style>

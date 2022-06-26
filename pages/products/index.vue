@@ -1,5 +1,5 @@
 <template>
-  <v-container class="products">
+  <v-container class="products pa-0">
     <v-row class="justify-center ma-0">
       <v-col class="pa-0" cols="12" sm="12">
         <!-- <SkeletonBlog v-if="$fetchState.pending" /> -->
@@ -13,7 +13,8 @@
         </div> -->
 
         <SliderSection v-if="words" :words="words" :selection="selection" />
-        <v-list class="list-pro">
+        <Products v-if="items.length > 1" :items="items" />
+        <!-- <v-list class="list-pro">
           <v-list-item
             class="item-list-pro"
             v-for="(item, i) in items"
@@ -71,7 +72,10 @@
                   >
                     <span
                       v-if="item.discount"
-                      class="txt-gray txt-font-small text-decoration-line-through"
+                      class="
+                        txt-gray txt-font-small
+                        text-decoration-line-through
+                      "
                       >$24.55</span
                     >
                     <span class="txt-black txt-font-title">$24.55</span>
@@ -94,7 +98,7 @@
               </div>
             </v-card>
           </v-list-item>
-        </v-list>
+        </v-list> -->
       </v-col>
     </v-row>
   </v-container>
@@ -144,9 +148,6 @@ export default {
       return newImg;
     },
 
-    openProduct: (id) => {
-      console.log("open product");
-    },
   },
 
   async created() {

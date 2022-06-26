@@ -131,8 +131,17 @@
   width: 90% !important;
 }
 
-.mw-calc-100-50 {
+.w-orj {
+  width: calc(100% -50px) !important;
   max-width: calc(100% -50px) !important;
+  margin: auto;
+}
+
+@include responsive(s){
+.w-orj{
+  width: calc(100% -25px) !important;
+
+}
 }
 
 .max-w-500 {
@@ -169,7 +178,6 @@
   border: 2px solid $color_gray !important;
   border-radius: 5px;
 }
-
 
 /************************** custom vuetify *************************/
 

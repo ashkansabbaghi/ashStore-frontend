@@ -1,5 +1,5 @@
 <template>
-  <div  class="home">
+  <div class="home">
     <SkeletonBlog v-if="$fetchState.pending" />
     <NotConnection v-else-if="$fetchState.error" />
     <v-container v-else>
@@ -75,5 +75,6 @@ export default {
       .then((res) => console.log(res))
       .catch((e) => console.log(e));
   },
+  fetchKey: "site-sidebar",
 };
 </script>

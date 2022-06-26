@@ -62,11 +62,11 @@
           </div>
 
           <v-btn-toggle class="ml-auto" v-model="toggle_exclusive" rounded>
-            <v-btn  x-small color="#0687AF">
+            <v-btn x-small color="#0687AF">
               <v-icon color="#fff">mdi-minus</v-icon>
             </v-btn>
             <v-btn x-small> 1 </v-btn>
-            <v-btn  x-small color="#0687AF">
+            <v-btn x-small color="#0687AF">
               <v-icon color="#fff">mdi-plus</v-icon>
             </v-btn>
           </v-btn-toggle>
