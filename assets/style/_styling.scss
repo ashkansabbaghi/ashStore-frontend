@@ -135,12 +135,14 @@
     .row-btn {
       display: flex;
       justify-content: space-evenly;
+      align-items: center;
     }
 
     .info-price {
-      height: 20px;
-      position: relative;
-      top: -10px;
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      top: 0;
 
       .price-dis {
         position: relative;

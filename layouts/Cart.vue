@@ -5,9 +5,7 @@
       <TheHeaderCart />
 
       <Nuxt keep-alive />
-
-      <TheFooterFadeBottom />
-      <TheFooterBtn />
+      <!-- footer in page cart  -->
     </div>
   </v-app>
 </template>

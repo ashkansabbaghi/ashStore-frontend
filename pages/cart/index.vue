@@ -44,11 +44,13 @@
               <CartProducts v-if="items.length > 0" :items="items" />
             </v-stepper-content>
 
-            <v-stepper-content step="2">
+            <v-stepper-content class="pa-0 mb-16" step="2">
+              <CartDistribution />
               <v-btn color="primary" @click="e1 = 3"> Continue 2 </v-btn>
             </v-stepper-content>
 
-            <v-stepper-content step="3">
+            <v-stepper-content class="pa-0 mb-16" step="3">
+              <CartPayment />
               <v-btn color="primary" @click="e1 = 1"> Continue 3 </v-btn>
               <v-btn @click="e1 = 2"> back </v-btn>
             </v-stepper-content>
@@ -56,6 +58,14 @@
         </v-stepper>
       </v-col>
     </v-row>
+    <TheFooterBtnInCart
+      :txt="btn.txt"
+      :payment="btn.pay"
+      :pay_disc="btn.pay_disc"
+      :loading="btn.loading"
+      :step="e1"
+      @click-cart="clickCart($event)"
+    />
   </v-container>
 </template>
 
@@ -92,6 +102,7 @@ export default {
         price: 15.6,
       },
     ],
+    btn: { txt: "distribution", pay: 12, pay_disc: 16.5, loading: false },
   }),
   watch: {
     steps(val) {
@@ -107,6 +118,42 @@ export default {
         this.e1 = 1;
       } else {
         this.e1 = n + 1;
+      }
+    },
+    clickCart(e) {
+      switch (e) {
+        case 1:
+          this.btn["loading"] = true;
+
+          setTimeout(() => {
+            this.btn["loading"] = false;
+            this.e1 = 2;
+            this.btn["txt"] = "payment";
+          }, 1500);
+          break;
+
+        case 2:
+          this.btn["loading"] = true;
+
+          setTimeout(() => {
+            this.btn["loading"] = false;
+            this.e1 = 3;
+            this.btn["txt"] = "final";
+          }, 1500);
+          break;
+
+        case 3:
+          this.btn["loading"] = true;
+
+          setTimeout(() => {
+            this.btn["loading"] = false;
+            this.e1 = 1;
+            this.btn["txt"] = "distribution";
+          }, 1500);
+          break;
+
+        default:
+          break;
       }
     },
   },

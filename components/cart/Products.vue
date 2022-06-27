@@ -39,14 +39,14 @@
       </div>
     </div>
     <v-list-item class="item-list-pro" v-for="(item, i) in items" :key="i">
-      <v-lazy
+      <!-- <v-lazy
         class="w-100"
         v-model="isActive"
         :options="{
           threshold: 0.5,
         }"
         transition="fade-transition"
-      >
+      > -->
         <v-card
           :ripple="false"
           class="cart-products pb-7"
@@ -191,7 +191,7 @@
           </div>
         </v-card>
         <v-divider color="#F02D46"></v-divider>
-      </v-lazy>
+      <!-- </v-lazy> -->
     </v-list-item>
   </v-list>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <v-footer class="footer-custom footer-btn" fixed>
-    <v-btn class="btn">
+    <v-btn class="btn" >
       <v-row class="row-btn">
         <div>cart</div>
         <div>|</div>
@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  props : ["txt" ,"payment" , "pay-discount" , "loading"],
   data: () => ({
   }),
   computed: {},
