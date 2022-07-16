@@ -45,6 +45,23 @@
   }
 }
 
+/* ******************** color ********************* */
+.txt-black {
+  color: $txt_black;
+}
+
+.txt-gray {
+  color: $txt_gray;
+}
+
+.txt-white {
+  color: $color_w !important;
+}
+
+.txt-second {
+  color: $color_secondary !important;
+}
+
 /* ******************** padding ********************* */
 .pa-10-20 {
   padding: 10px 20px !important;
@@ -55,6 +72,7 @@
 .txt-font-title {
   font-size: $font_title
 }
+
 .txt-font-small {
   font-size: $font_small
 }
@@ -63,6 +81,7 @@
   .txt-font-title {
     font-size: $font_s_title
   }
+
   .txt-font-small {
     font-size: $font_s_small
   }
@@ -88,21 +107,7 @@
   text-overflow: ellipsis;
 }
 
-.txt-black {
-  color: $txt_black;
-}
 
-.txt-gray {
-  color: $txt_gray;
-}
-
-.txt-white {
-  color: $color_w !important;
-}
-
-.txt-second {
-  color: $color_secondary !important;
-}
 
 .letter-spacing-1 {
   letter-spacing: 1px;
@@ -137,11 +142,11 @@
   margin: auto;
 }
 
-@include responsive(s){
-.w-orj{
-  width: calc(100% -25px) !important;
+@include responsive(s) {
+  .w-orj {
+    width: calc(100% -25px) !important;
 
-}
+  }
 }
 
 .max-w-500 {
@@ -221,4 +226,17 @@
 
   }
 
+}
+
+/* ****************** data picker *********************** */
+.vpd-content {
+  border-radius: 20px;
+
+  .vpd-header {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .vpd-body {
+    font-size: 14px;
+  }
 }

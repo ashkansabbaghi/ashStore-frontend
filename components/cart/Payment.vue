@@ -1,9 +1,10 @@
 <template>
-  <div>PAYMENT</div>
+  <div>PAYMENT
+
+  </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 export default {
   data: () => ({
   }),
@@ -14,6 +15,7 @@ export default {
       let newImg = `http://${img}`;
       return newImg;
     },
+
   },
   async fetch() {},
 };

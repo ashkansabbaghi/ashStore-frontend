@@ -19,10 +19,7 @@
                 category{{ n }}
               </div>
               <div v-if="active" class="active-txt flex-grow-1 text-center">
-                <NuxtLink
-                  class="click-product"
-                  to="/products"
-                ></NuxtLink>
+                <NuxtLink class="click-product" to="/products"></NuxtLink>
                 <div class="">category{{ n }}</div>
                 <div class="anim-click"></div>
               </div>
@@ -40,20 +37,33 @@ import { mapActions, mapGetters } from "vuex";
 export default {
   name: "category",
 
-  // data: () => ({
-  //   catId: "6262673b95a1856b75e8b353",
-  // }),
-  // computed: {
-  //   ...mapGetters("product", ["gProductsCat"]),
-  // },
+  data: () => ({
+    catId: "6262673b95a1856b75e8b353",
+    arr: ["ashkan", "ali", "fati"],
+  }),
+  computed: {
+    ...mapGetters("product", ["gProductsCat"]),
+  },
 
-  // methods: {
-  //   ...mapActions("product", ["getProductOfCategory"]),
-  // },
-  // async fetch() {
-  //   await this.getProductOfCategory(this.catId);
-  //   // const promises = [await this.getProductOfCategory(this.catId)];
-  //   // await Promise.all(promises);
-  // },
+  methods: {
+    testMethodSet() {
+      const setArr = new Set(this.arr);
+      setArr.add("shagha");
+      setArr.delete("ashkan");
+      console.log(setArr);
+    },
+   async clickT() {
+      setTimeout( () => console.log("test click"), 500);
+    },
+    ...mapActions("product", ["getProductOfCategory"]),
+  },
+  created() {
+    this.testMethodSet();
+  },
+  async fetch() {
+    // await this.getProductOfCategory(this.catId);
+    // const promises = [await this.getProductOfCategory(this.catId)];
+    // await Promise.all(promises);
+  },
 };
 </script>

@@ -136,6 +136,7 @@ export default {
         desc: "description product model and price",
       },
     ],
+    arr: ["ashkan", "shagha", "fati", "ali"],
   }),
   computed: {
     ...mapGetters("product", ["gProductsCat"]),
@@ -143,14 +144,17 @@ export default {
   methods: {
     ...mapActions("product", ["getProductOfCategory"]),
 
+
+
     setImage: (img) => {
       let newImg = `http://localhost:8080/img/${img}`;
       return newImg;
     },
-
   },
 
-  async created() {
+  created() {
+    //  await this.test()
+
     // await this.getProductOfCategory(this.catId);
   },
 

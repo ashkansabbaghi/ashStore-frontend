@@ -839,32 +839,76 @@ a.nuxt-link-exact-active {
 }
 
 @include responsive(s) {
-  .products {
-    .cart-products {
+  .cart-products {
 
-      .info-pro {
-        padding: 0px 0px 0px 15px;
+    .info-pro {
+      padding: 0px 0px 0px 15px;
 
-        .sub-pro {
-          font-size: $font_s_small;
-        }
-
-        .title-pro {
-          font-size: $font_s_title;
-        }
+      .sub-pro {
+        font-size: $font_s_small;
       }
 
-      .img-pro {
-        border-radius: 15px !important;
-        height: 140px !important;
-        width: 120px !important;
+      .title-pro {
+        font-size: $font_s_title !important;
       }
+    }
+
+    .img-pro {
+      border-radius: 15px !important;
+      height: 140px !important;
+      width: 120px !important;
     }
   }
 
   .list-pro {
     width: calc(100% - 25px) !important;
 
+  }
+}
+
+/* ****************** cart distribution ******************** */
+.list-pro {
+  &.desc {
+    width: calc(100% - 50px) !important;
+    background: white !important;
+    border-radius: 20px !important;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+
+    .nav-pro-cart {
+      color: $txt_black !important;
+
+      .title {
+        font-size: 16px !important;
+      }
+    }
+
+    .custom-radio {
+      position: relative;
+      .v-input--selection-controls__input {
+        position: absolute !important;
+        top: 36px !important
+      }
+    }
+
+    .add-address{
+      padding: 30px 20px 10px 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+@include responsive(s) {
+  .list-pro {
+    &.desc {
+      .nav-pro-cart {
+        .title {
+          font-size: 14px !important;
+        }
+      }
+    }
   }
 }
 

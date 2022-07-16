@@ -45,14 +45,11 @@
             </v-stepper-content>
 
             <v-stepper-content class="pa-0 mb-16" step="2">
-              <CartDistribution />
-              <v-btn color="primary" @click="e1 = 3"> Continue 2 </v-btn>
+              <CartDistribution v-if="items.length > 0" :items="items" />
             </v-stepper-content>
 
             <v-stepper-content class="pa-0 mb-16" step="3">
               <CartPayment />
-              <v-btn color="primary" @click="e1 = 1"> Continue 3 </v-btn>
-              <v-btn @click="e1 = 2"> back </v-btn>
             </v-stepper-content>
           </v-stepper-items>
         </v-stepper>
