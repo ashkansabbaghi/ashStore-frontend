@@ -1,12 +1,12 @@
 <template>
-  <v-lazy
+  <!-- <v-lazy
     v-model="isActive"
     :options="{
       threshold: 0.5,
     }"
     min-height="200"
     transition="fade-transition"
-  >
+  > -->
     <v-card class="cart-blog mx-auto mt-10">
       <!--  user in single blog -->
       <template>
@@ -85,7 +85,7 @@
         </v-list-item-content>
       </v-list-item>
     </v-card>
-  </v-lazy>
+  <!-- </v-lazy> -->
 </template>
 
 <script>
