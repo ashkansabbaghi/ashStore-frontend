@@ -31,7 +31,7 @@
             min-height="200"
             transition="fade-transition"
           >
-            <SliderSmall />
+            <SliderSmall :items="productsHot" :title="titleProductsHot" />
           </v-lazy>
         </v-col>
       </v-row>
@@ -61,6 +61,119 @@ export default {
   name: "home",
   data: () => ({
     isActive: false,
+    titleProductsHot: "Products Hot",
+    productsHot: [
+      {
+        id: 1,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug_1"
+      },
+      {
+        id: 2,
+        image: "http://",
+        name: "title product",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug_2"
+      },
+      {
+        id: 3,
+        image: "http://",
+        name: "title product",
+        caption: "title caption products",
+        price: 12,
+        discount: 0.2,
+        slug: "slug_3"
+      },
+      {
+        id: 4,
+        image: "http://",
+        name: "title product",
+        caption: "title caption products",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 5,
+        image: "http://",
+        name: "title product",
+        caption: "title caption products",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 6,
+        image: "http://",
+        name: "title product",
+        caption: "title caption products",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+    ],
+    productsDis: [
+      {
+        id: 1,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 2,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 3,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 4,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 5,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+      {
+        id: 6,
+        image: "http://",
+        name: "title product discount",
+        caption: "title caption products discount",
+        price: 12,
+        discount: 0.2,
+        slug: "slug"
+      },
+    ],
   }),
   methods: {
     ...mapActions("blog", ["getBlogs", "getCategories", "getUsers"]),

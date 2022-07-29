@@ -219,7 +219,7 @@ a.nuxt-link-exact-active {
 
 /* ************** carousel **************** */
 .slide-group-custom {
-  background: $bg_light;
+  background: transparent !important;
   padding: 0px !important;
 
   .img-custom {
@@ -1091,10 +1091,6 @@ a.nuxt-link-exact-active {
       }
     }
 
-    // .v-stepper__step {
-    //   // flex-basis: 130px;
-    // }
-
     .v-stepper__label {
       display: block !important;
       font-size: $font_small;
@@ -1113,4 +1109,24 @@ a.nuxt-link-exact-active {
       }
     }
   }
+}
+
+// cart payment
+
+.summary {
+  margin: 30px 0 0 0 !important;
+  padding: 0px !important;
+
+  .title {
+
+    .text {
+      font-size: $font_small;
+    }
+  }
+
+  .caption {
+    font-size: $font_small;
+    color: $color_gray;
+  }
+
 }

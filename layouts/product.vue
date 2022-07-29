@@ -6,7 +6,7 @@
       <Nuxt keep-alive/>
 
       <TheFooterFadeBottom />
-      <TheFooterBtn />
+      <TheFooterBtnAddCart />
     </div>
   </v-app>
 </template>

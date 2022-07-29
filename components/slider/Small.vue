@@ -1,12 +1,11 @@
 <template>
   <div>
-    <h3 class="title-carousel">HOT PRODUCT</h3>
+    <h3 class="title-carousel" v-if="title" v-text="title"></h3>
     <SlotCarouselSm>
-      <div class="slide-group-custom" v-for="i in 6" :key="i">
+      <div class="slide-group-custom" v-for="i in items" :key="i.id">
         <v-card
-          @click="product()"
-          class="card-slid-custom card-small  shadow-none mr-8"
-
+          @click="product(i.slug)"
+          class="card-slid-custom card-small shadow-none mr-8"
         >
           <img
             class="img-custom img-small"
@@ -14,13 +13,9 @@
             alt="product image"
           />
           <div class="card-info">
-            <h4 class="txt-overflow txt-black">
-              hot product name old and new face
-            </h4>
-            <p class="txt-overflow txt-gray">
-              about product about product about product
-            </p>
-            <h4>$27.77</h4>
+            <h4 class="txt-overflow txt-black" v-text="i.name"></h4>
+            <p class="txt-overflow txt-gray" v-if="!notDesc" v-text="i.caption"></p>
+            <h4>$<span v-text="i.price"></span></h4>
           </div>
         </v-card>
       </div>
@@ -29,12 +24,14 @@
 </template>
 <script>
 export default {
+  props: ["title", "items","notDesc"],
   data: () => ({
     model: null,
   }),
   methods: {
-    product(){
-      this.$router.push("/products/slug");
+    product(slug) {
+      console.log(slug);
+      this.$router.push(`/products/${slug}`);
     },
   },
 };

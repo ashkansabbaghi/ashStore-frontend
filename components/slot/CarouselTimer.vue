@@ -23,43 +23,37 @@ export default {
       // pauseOnDotsHover: true,
       pauseOnFocus: true,
       pauseOnHover: true,
+      initialSlide: 0,
+
       responsive: [
         {
           breakpoint: 991,
           settings: {
             slidesToShow: 2.2,
-            // slidesToScroll: 1,
-            // infinite: true,
-            // dots: true,
           },
         },
         {
           breakpoint: 800,
           settings: {
             slidesToShow: 1.8,
-            // slidesToScroll: 1,
-            initialSlide: 2,
           },
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 1.4,
-            slidesToScroll: 1,
           },
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1.1,
-            slidesToScroll: 1,
           },
         },
         {
           breakpoint: 380,
           settings: {
             slidesToShow: 0.98,
-            // slidesToScroll: 1,
             centerMode: false,
           },
         },

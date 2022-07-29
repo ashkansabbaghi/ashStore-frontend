@@ -15,6 +15,7 @@ export default {
     settings: {
       // centerMode: true,
       focusOnSelect: true,
+      initialSlide: 0,
       infinite: false,
       slidesToShow: 2.2,
       slidesToScroll: 1,
@@ -26,46 +27,36 @@ export default {
           breakpoint: 991,
           settings: {
             slidesToShow: 2.2,
-            // slidesToScroll: 1,
-            // infinite: true,
-            // dots: true,
           },
         },
         {
           breakpoint: 800,
           settings: {
             slidesToShow: 1.8,
-            // slidesToScroll: 1,
-            initialSlide: 2,
           },
         },
         {
           breakpoint: 700,
           settings: {
             slidesToShow: 1.6,
-            // slidesToScroll: 1,
-            initialSlide: 2,
           },
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 1.3,
-            slidesToScroll: 1,
           },
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1.1,
-            slidesToScroll: 1,
           },
         },
         {
           breakpoint: 380,
           settings: {
             slidesToShow: 0.95,
-            slidesToScroll: 1,
           },
         },
       ],
