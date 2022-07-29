@@ -1,21 +1,94 @@
 <template>
-  <div>PAYMENT
+  <v-container>
+    <!-- choice methods payment -->
+    <v-list class="list-pro desc mb-8">
+      <!-- title -->
+      <div class="nav-pro-cart">
+        <h1 class="title">
+          <svg
+            class="ma-auto mr-2"
+            width="20"
+            height="15"
+            viewBox="0 0 16 12"
+            fill="#81858B"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.8125 0.375C2.06658 0.375 1.35121 0.671316 0.823762 1.19876C0.296316 1.72621 0 2.44158 0 3.1875V3.75H15.75V3.1875C15.75 2.44158 15.4537 1.72621 14.9262 1.19876C14.3988 0.671316 13.6834 0.375 12.9375 0.375H2.8125ZM15.75 4.875H0V8.8125C0 9.55842 0.296316 10.2738 0.823762 10.8012C1.35121 11.3287 2.06658 11.625 2.8125 11.625H12.9375C13.6834 11.625 14.3988 11.3287 14.9262 10.8012C15.4537 10.2738 15.75 9.55842 15.75 8.8125V4.875ZM10.6875 8.25H12.9375C13.0867 8.25 13.2298 8.30926 13.3352 8.41475C13.4407 8.52024 13.5 8.66331 13.5 8.8125C13.5 8.96168 13.4407 9.10476 13.3352 9.21025C13.2298 9.31574 13.0867 9.375 12.9375 9.375H10.6875C10.5383 9.375 10.3952 9.31574 10.2898 9.21025C10.1843 9.10476 10.125 8.96168 10.125 8.8125C10.125 8.66331 10.1843 8.52024 10.2898 8.41475C10.3952 8.30926 10.5383 8.25 10.6875 8.25Z"
+            />
+          </svg>
 
-  </div>
+          <span>Payment Method</span>
+        </h1>
+      </div>
+      <!-- item -->
+      <v-radio-group v-model="selectDelivery">
+        <v-radio
+          class="mt-2"
+          label="red"
+          color="#0687AF"
+          v-for="(item, i) in items"
+          :key="i"
+          :value="i"
+        >
+          <template v-slot:label>
+            {{ item }}
+          </template>
+        </v-radio>
+      </v-radio-group>
+    </v-list>
+    <!-- Orders Summary -->
+    <v-list class="list-pro desc mb-8">
+      <!-- title -->
+      <div class="nav-pro-cart">
+        <h1 class="title">
+          <svg
+            class="ma-auto mr-2"
+            width="20"
+            height="15"
+            viewBox="0 0 16 12"
+            fill="#81858B"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2.8125 0.375C2.06658 0.375 1.35121 0.671316 0.823762 1.19876C0.296316 1.72621 0 2.44158 0 3.1875V3.75H15.75V3.1875C15.75 2.44158 15.4537 1.72621 14.9262 1.19876C14.3988 0.671316 13.6834 0.375 12.9375 0.375H2.8125ZM15.75 4.875H0V8.8125C0 9.55842 0.296316 10.2738 0.823762 10.8012C1.35121 11.3287 2.06658 11.625 2.8125 11.625H12.9375C13.6834 11.625 14.3988 11.3287 14.9262 10.8012C15.4537 10.2738 15.75 9.55842 15.75 8.8125V4.875ZM10.6875 8.25H12.9375C13.0867 8.25 13.2298 8.30926 13.3352 8.41475C13.4407 8.52024 13.5 8.66331 13.5 8.8125C13.5 8.96168 13.4407 9.10476 13.3352 9.21025C13.2298 9.31574 13.0867 9.375 12.9375 9.375H10.6875C10.5383 9.375 10.3952 9.31574 10.2898 9.21025C10.1843 9.10476 10.125 8.96168 10.125 8.8125C10.125 8.66331 10.1843 8.52024 10.2898 8.41475C10.3952 8.30926 10.5383 8.25 10.6875 8.25Z"
+            />
+          </svg>
+
+          <span>Orders Summary</span>
+        </h1>
+      </div>
+      <!-- item -->
+      <v-radio-group v-model="selectDelivery">
+        <v-radio
+          class="mt-2"
+          label="red"
+          color="#0687AF"
+          v-for="(item, i) in items"
+          :key="i"
+          :value="i"
+        >
+          <template v-slot:label>
+            {{ item }}
+          </template>
+        </v-radio>
+      </v-radio-group>
+    </v-list>
+  </v-container>
 </template>
 
 <script>
 export default {
   data: () => ({
+    selectDelivery: "",
+    items: ["cart to cart", "(COD) Cash On Delivery"],
   }),
-  computed: {
-  },
+  computed: {},
   methods: {
     setImage: (img) => {
       let newImg = `http://${img}`;
       return newImg;
     },
-
   },
   async fetch() {},
 };

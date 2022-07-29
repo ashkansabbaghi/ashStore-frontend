@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <!-- delivery address -->
     <v-list class="list-pro desc mb-8">
       <!-- title -->
       <div class="nav-pro-cart">
@@ -27,12 +28,9 @@
               elevation="0"
             >
               <v-divider v-show="i > 0" color="#D3D3D3"></v-divider>
-
-              <div
-                class="mt-7 d-flex flex-no-wrap justify-end flex-row-reverse"
-              >
+              <div class="mt-7 d-flex justify-space-between flex-row">
                 <!-- info product -->
-                <div class="info-pro pl-10">
+                <div class="info-pro w-auto pl-10">
                   <v-card-title
                     single-line
                     hide-details
@@ -108,6 +106,41 @@
                     </v-row>
                   </v-container>
                 </div>
+
+                <!-- item more -->
+                <v-btn text @click="clickMore(i)" class="align-self-center rotate-90">
+                  <svg
+                    width="29"
+                    height="7"
+                    viewBox="0 0 29 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <ellipse
+                      cx="14.6842"
+                      cy="3.4"
+                      rx="3.4"
+                      ry="3.40852"
+                      transform="rotate(90 14.6842 3.4)"
+                      fill="#81858B"
+                    />
+                    <ellipse
+                      cx="3.77694"
+                      cy="3.4"
+                      rx="3.4"
+                      ry="3.40852"
+                      transform="rotate(90 3.77694 3.4)"
+                      fill="#81858B"
+                    />
+                    <ellipse
+                      cx="25.5915"
+                      cy="3.4"
+                      rx="3.4"
+                      ry="3.40852"
+                      transform="rotate(90 25.5915 3.4)"
+                      fill="#81858B"
+                    /></svg
+                ></v-btn>
               </div>
             </v-card>
           </template>
@@ -116,6 +149,8 @@
       <v-divider color="#D3D3D3"></v-divider>
       <a class="add-address">ADD ADDRESS</a>
     </v-list>
+
+    <!-- delivery time -->
     <v-list class="list-pro desc mb-8">
       <!-- title -->
       <v-container class="pa-0">
@@ -133,10 +168,7 @@
             <v-icon x-small color="#0687AF"> mdi-checkbox-blank-circle</v-icon>
             <input type="text" class="showPicker" placeholder="select date" />
           </div>
-          <v-btn
-            text
-            class="showPicker txt-second"
-            @click="showPicker = true"
+          <v-btn text class="showPicker txt-second" @click="showPicker = true"
             >select</v-btn
           >
         </v-row>
@@ -178,6 +210,9 @@ export default {
     setImage: (img) => {
       let newImg = `http://${img}`;
       return newImg;
+    },
+    clickMore: (i) => {
+      console.log("click-more-icon",i);
     },
   },
   async fetch() {},

@@ -45,6 +45,11 @@
   }
 }
 
+/* ******************** width ********************* */
+.w-auto {
+  width: auto !important;
+}
+
 /* ******************** color ********************* */
 .txt-black {
   color: $txt_black;
@@ -60,6 +65,11 @@
 
 .txt-second {
   color: $color_secondary !important;
+}
+
+/* ******************** positional ********************* */
+.rotate-90 {
+transform : rotate(90deg) !important;
 }
 
 /* ******************** padding ********************* */
@@ -112,7 +122,6 @@
 .letter-spacing-1 {
   letter-spacing: 1px;
 }
-
 
 
 /* ******************** bg btn ********************* */

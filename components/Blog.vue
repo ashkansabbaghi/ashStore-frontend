@@ -64,15 +64,16 @@
       <!-- info blog -->
       <v-list-item class="pa-0 mb-16" three-line>
         <v-list-item-content class="info-blog pa-0">
-          <h5
-            class="title-blog txt-black mb-3 mt-5 dir-rtl"
+          <h1
+            class="title-blog txt-black dir-rtl"
             v-html="blog.title.rendered"
-          ></h5>
-          <p
+          ></h1>
+          <!-- <span>{{content}}</span> -->
+          <span
             class="text-blog txt-black dir-rtl"
             :class="{ txt_overflow_line_2: more }"
             v-html="content"
-          ></p>
+          ></span>
           <div class="d-flex justify-space-between pt-7 mb-6 footer-blog">
             <span class="txt-gray" v-text="blog.date"></span>
             <div v-for="(c, i) in blog.categories" :key="i">
@@ -115,7 +116,6 @@ export default {
     },
     separator() {
       let m;
-      // console.log(this.blog);
       const info = this.blog.content.rendered;
       let rex = /<img[^>]+src="http:\/\/([^">]+)/g;
       let rexTagImg = /<img[^>]*\/?>/g;
@@ -124,6 +124,7 @@ export default {
       }
       this.content = info.replace(rexTagImg, " ");
     },
+
     setImage: (img) => {
       let newImg = `http://${img}`;
       return newImg;
