@@ -39,7 +39,7 @@
     </v-list>
 
     <!-- Orders Summary -->
-    <v-list class="list-pro desc mb-8">
+    <v-list class="list-pro desc mb-8 overflow-hidden">
       <!-- title -->
       <div class="nav-pro-cart">
         <h1 class="title">
@@ -60,7 +60,7 @@
         </h1>
       </div>
       <!-- item -->
-      <v-container class="summary overflow-hidden">
+      <v-container class="summary ">
         <div class="title">
           <svg
             class="ma-auto mr-4"

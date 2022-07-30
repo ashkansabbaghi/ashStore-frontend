@@ -1,6 +1,10 @@
 <template>
   <v-footer class="footer-custom footer-btn" fixed>
-    <v-btn class="btn" :loading="loading" :disabled="loading" @click="$emit('click-cart', step)">
+    <v-btn
+      class="btn"
+      :loading="loading"
+      @click="$emit('click-cart', step)"
+    >
       <v-row class="row-btn">
         <div v-if="txt" v-text="txt"></div>
         <div>|</div>
@@ -19,7 +23,7 @@
 
 <script>
 export default {
-  props: ["txt", "payment", "pay_disc", "loading","step"],
+  props: ["txt", "payment", "pay_disc", "loading", "step"],
   data: () => ({}),
   computed: {},
   async created() {},

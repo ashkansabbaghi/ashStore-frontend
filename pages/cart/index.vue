@@ -4,10 +4,12 @@
       <v-col class="pa-0" cols="12" sm="12">
         <v-stepper v-model="e1" alt-labels class="stepper">
           <v-stepper-header>
+            <!-- :editable="e1 > 1 ? false : true" -->
             <v-stepper-step
+              editable
+              @click="clickCart(3)"
               v-ripple="false"
               :complete="e1 > 1"
-              :editable="e1 > 1 ? false : true"
               class="px-0"
               step="1"
             >
@@ -16,10 +18,12 @@
 
             <v-divider></v-divider>
 
+            <!-- :editable="e1 > 2 ? false : true" -->
             <v-stepper-step
+              editable
               v-ripple="false"
               :complete="e1 > 2"
-              :editable="e1 > 2 ? false : true"
+              @click="clickCart(1)"
               class="px-0"
               step="2"
             >
@@ -28,10 +32,12 @@
 
             <v-divider></v-divider>
 
+            <!-- editable -->
             <v-stepper-step
+              editable
               v-ripple="false"
               :complete="e1 > 3"
-              editable
+              @click="clickCart(2)"
               class="px-0"
               step="3"
             >
@@ -110,7 +116,6 @@ export default {
   },
   methods: {
     nextStep(n) {
-      console.log("next step");
       if (n === this.steps) {
         this.e1 = 1;
       } else {
@@ -121,32 +126,29 @@ export default {
       switch (e) {
         case 1:
           this.btn["loading"] = true;
-
           setTimeout(() => {
             this.btn["loading"] = false;
             this.e1 = 2;
             this.btn["txt"] = "payment";
-          }, 1500);
+          }, 500);
           break;
 
         case 2:
           this.btn["loading"] = true;
-
           setTimeout(() => {
             this.btn["loading"] = false;
             this.e1 = 3;
             this.btn["txt"] = "final";
-          }, 1500);
+          }, 500);
           break;
 
         case 3:
           this.btn["loading"] = true;
-
           setTimeout(() => {
             this.btn["loading"] = false;
             this.e1 = 1;
             this.btn["txt"] = "distribution";
-          }, 1500);
+          }, 500);
           break;
 
         default:
