@@ -108,7 +108,11 @@
                 </div>
 
                 <!-- item more -->
-                <v-btn text @click="clickMore(i)" class="align-self-center rotate-90">
+                <v-btn
+                  text
+                  @click="clickMore(i)"
+                  class="align-self-center rotate-90"
+                >
                   <svg
                     width="29"
                     height="7"
@@ -147,7 +151,9 @@
         </v-radio>
       </v-radio-group>
       <v-divider color="#D3D3D3"></v-divider>
-      <a class="add-address">ADD ADDRESS</a>
+      <!-- <a class="add-address">ADD ADDRESS</a> -->
+      <DialogFormAddress title="Add Address" class="add-address" />
+
     </v-list>
 
     <!-- delivery time -->
@@ -187,6 +193,8 @@
         />
       </v-container>
     </v-list>
+
+
   </v-container>
 </template>
 
@@ -199,7 +207,6 @@ export default {
     isActive: false,
     toggle_exclusive: undefined,
     selectDelivery: "",
-
     date: "",
     showPicker: false,
   }),
@@ -212,7 +219,7 @@ export default {
       return newImg;
     },
     clickMore: (i) => {
-      console.log("click-more-icon",i);
+      console.log("click-more-icon", i);
     },
   },
   async fetch() {},

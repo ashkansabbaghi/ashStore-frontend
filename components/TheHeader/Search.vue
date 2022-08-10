@@ -17,6 +17,7 @@
       <input
         v-show="!toggleSearch"
         ref="search"
+        v-model="search"
         id="search"
         class="input-custom"
         autofocus
@@ -24,10 +25,11 @@
 
       <v-spacer></v-spacer>
 
+      <!-- btn close -->
       <v-btn
         v-show="!toggleSearch"
         icon
-        @click="toggleSearch = true"
+        @click="btnClose()"
         v-ripple="{ class: `primary--text` }"
       >
         <v-icon>mdi-close</v-icon>
@@ -48,6 +50,7 @@ export default {
     selectItem: "",
     toggleSearch: true,
     sheet: false,
+    search: "",
   }),
   computed: {
     // ...mapGetters("core", ["isBack", "activeIcon"]),
@@ -58,6 +61,11 @@ export default {
       console.log("focus");
       this.toggleSearch = false;
       setTimeout(() => document.getElementById("search").focus(), 200);
+    },
+
+    btnClose() {
+      this.toggleSearch = true;
+      this.search = ""
     },
   },
 };

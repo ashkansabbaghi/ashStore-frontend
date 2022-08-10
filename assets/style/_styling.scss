@@ -899,6 +899,10 @@ a.nuxt-link-exact-active {
       padding: 30px 20px 10px 20px;
       width: 100%;
       text-align: center;
+
+      .txt-btn {
+        color: $color_secondary !important;
+      }
     }
   }
 }
@@ -1129,4 +1133,11 @@ a.nuxt-link-exact-active {
     color: $color_gray;
   }
 
+}
+
+/* ********************* modals ********************** */
+
+.modal-title {
+  justify-content: center;
+  padding-top: 25px !important;
 }
