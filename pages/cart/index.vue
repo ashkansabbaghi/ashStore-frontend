@@ -3,7 +3,7 @@
     <v-row class="justify-center ma-0">
       <v-col class="pa-0" cols="12" sm="12">
         <v-stepper v-model="e1" alt-labels class="stepper">
-          <v-stepper-header>
+          <v-stepper-header class="cart-stepper-header">
             <!-- :editable="e1 > 1 ? false : true" -->
             <v-stepper-step
               editable

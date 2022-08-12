@@ -119,6 +119,7 @@
 
 }
 
+// footer btn
 .footer-btn {
   display: flex !important;
   justify-content: center !important;
@@ -159,6 +160,18 @@
 
   }
 }
+
+@include responsive (min) {
+  .footer-btn {
+    .btn {
+      width: 70% !important;
+      font-size: $font_s_small !important;
+    }
+  }
+}
+
+
+
 
 a.nuxt-link-active,
 .default-color-nuxt-link {
@@ -867,45 +880,7 @@ a.nuxt-link-exact-active {
   }
 }
 
-/* ****************** cart distribution ******************** */
-.list-pro {
-  &.desc {
-    width: calc(100% - 50px) !important;
-    background: white !important;
-    border-radius: 20px !important;
-    padding: 30px 25px;
-    display: flex;
-    flex-direction: column;
 
-    .nav-pro-cart {
-      color: $txt_black !important;
-
-      .title {
-        font-size: 16px !important;
-        display: flex !important;
-      }
-    }
-
-    .custom-radio {
-      position: relative;
-
-      .v-input--selection-controls__input {
-        position: absolute !important;
-        top: 36px !important
-      }
-    }
-
-    .add-address {
-      padding: 30px 20px 10px 20px;
-      width: 100%;
-      text-align: center;
-
-      .txt-btn {
-        color: $color_secondary !important;
-      }
-    }
-  }
-}
 
 @include responsive(s) {
   .list-pro {
@@ -1080,6 +1055,54 @@ a.nuxt-link-exact-active {
 
 
 /* ********************* cart ********************** */
+
+// header
+@include responsive (min) {
+  .cart-stepper-header {
+    margin: auto -30px !important;
+  }
+}
+
+
+/* distribution */
+.list-pro {
+  &.desc {
+    width: calc(100% - 50px) !important;
+    background: white !important;
+    border-radius: 20px !important;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+
+    .nav-pro-cart {
+      color: $txt_black !important;
+
+      .title {
+        font-size: 16px !important;
+        display: flex !important;
+      }
+    }
+
+    .custom-radio {
+      position: relative;
+
+      .v-input--selection-controls__input {
+        position: absolute !important;
+        top: 36px !important
+      }
+    }
+
+    .add-address {
+      padding: 30px 20px 10px 20px;
+      width: 100%;
+      text-align: center;
+
+      .txt-btn {
+        color: $color_secondary !important;
+      }
+    }
+  }
+}
 
 //header
 .stepper {

@@ -38,21 +38,21 @@ export default {
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 1.8,
+            slidesToShow: 2.4,
             slidesToScroll: 1,
           },
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1.6,
+            slidesToShow: 2.1,
             slidesToScroll: 1,
           },
         },
         {
           breakpoint: 380,
           settings: {
-            slidesToShow: 1.2,
+            slidesToShow: 1.6,
             slidesToScroll: 1,
           },
         },
